@@ -1,0 +1,9 @@
+languageCode = "en-us"
+title = "Ben Does Baseball"
+baseurl = "https://baseball.benbailey.me/"
+theme = "hyde"
+
+[params]
+  themeColor = "theme-base-09"
+  description = "A home for Ben Bailey's baseball analytics projects."
+  # copyright = "Ben Bailey"
