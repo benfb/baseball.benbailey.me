@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on Ben Does Baseball</title>
-    <link>https://baseball.benbailey.me/tags/development/index.xml</link>
-    <description>Recent content in Development on Ben Does Baseball</description>
+    <title>Posts on Ben Does Baseball</title>
+    <link>https://baseball.benbailey.me/post/index.xml</link>
+    <description>Recent content in Posts on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://baseball.benbailey.me/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2017 18:38:53 -0500</lastBuildDate>
+    <atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Descriptions and Probabilities</title>

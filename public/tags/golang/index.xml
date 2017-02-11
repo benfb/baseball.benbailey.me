@@ -9,12 +9,108 @@
     <atom:link href="https://baseball.benbailey.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Blah</title>
-      <link>https://baseball.benbailey.me/posts/blah/</link>
+      <title>Descriptions and Probabilities</title>
+      <link>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</link>
       <pubDate>Tue, 07 Feb 2017 18:38:53 -0500</pubDate>
       
-      <guid>https://baseball.benbailey.me/posts/blah/</guid>
-      <description>&lt;p&gt;Blah&lt;/p&gt;
+      <guid>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</guid>
+      <description>&lt;p&gt;This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
+Using the &lt;code&gt;baseball&lt;/code&gt; umbrella application combined with R and Plotly, I generated a win expectancy
+graph for a random game.&lt;/p&gt;
+
+&lt;p&gt;In any given situation, the win expectancy is equivalent to the percentage of games
+that teams in that exact situation went on to win. To calculate the win probability of
+a situation, the application converts the situation into a hash using the number of outs,
+inning, number and position of base runners, and the current score, then looks it up in a
+table of historical win probabilities. This table was calculated using &lt;a href=&#34;https://gregstoll.dyndns.org/~gregstoll/baseball/stats.html&#34;&gt;Greg Stoll&amp;rsquo;s scripts&lt;/a&gt;
+and &lt;a href=&#34;http://www.retrosheet.org&#34;&gt;Retrosheet&lt;/a&gt; data. The code for the win expectancy service can be found
+&lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_win_ex&#34;&gt;here&lt;/a&gt;, and the general downloader&amp;rsquo;s source is &lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_slurper&#34;&gt;here&lt;/a&gt;. What follows
+is an example of a manually-generated win expectancy graph of the game that occurred
+on May 10th of last season between the Padres and the Cubs.&lt;/p&gt;
+
+&lt;p&gt;First, we utilize the two functions &lt;code&gt;probabilities_from_game/2&lt;/code&gt; and &lt;code&gt;descriptions_from_game/2&lt;/code&gt;
+to get vectors of win expectancies and descriptions of every event that occurred in the game:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;iex(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.probabilities_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
+[[&lt;span style=&#34;color: #009999&#34;&gt;0.5652355266525733&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5826495329514373&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.593064127007075&lt;/span&gt;],
+ [&lt;span style=&#34;color: #009999&#34;&gt;0.5669081828973761&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5470361185179661&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.534091190836288&lt;/span&gt;],
+ [&lt;span style=&#34;color: #009999&#34;&gt;0.5569277494191046&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5742743999613658&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5803200220916497&lt;/span&gt;],...]
+
+iex(&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.descriptions_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
+[[&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&amp;quot;&lt;/span&gt;,
+  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Wil Myers flies out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;,
+  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Matt Kemp lines out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;],
+ [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Dexter Fowler strikes out swinging.&amp;quot;&lt;/span&gt;,
+  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jason Heyward lines out to center fielder Jon Jay.&amp;quot;&lt;/span&gt;,
+  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Kris Bryant lines out to right fielder Matt Kemp.&amp;quot;&lt;/span&gt;],...]
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;library&lt;/span&gt;(plotly)
+&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_username&amp;quot;&lt;/span&gt; = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;benfb&amp;quot;&lt;/span&gt;)
+&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_api_key&amp;quot;&lt;/span&gt; = API_KEY)
+probabilities &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(PROBABILITY_VECTOR)
+x &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y)
+event &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(DESCRIPTION_VECTOR)
+data &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;data.frame&lt;/span&gt;(x, y, event)
+
+kb &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
+  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
+  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
+  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
+  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
+  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
+  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
+  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;K Bryant Double&amp;#39;&lt;/span&gt;,
+  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
+              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
+              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
+  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
+
+ad &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
+  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
+  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
+  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
+  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
+  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
+  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
+  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;A Dickerson Home Run&amp;#39;&lt;/span&gt;,
+  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
+              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
+              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
+  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
+
+p &amp;lt;- plot_ly(
+  data,
+  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y),
+  y = probabilities,
+  type = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;scatter&amp;#39;&lt;/span&gt;,
+  mode = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;lines&amp;#39;&lt;/span&gt;,
+  text = event) %&amp;gt;%
+layout(
+  title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;SDN @ CHN 2016-05-10&amp;#39;&lt;/span&gt;,
+  xaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Game Event&amp;#39;&lt;/span&gt;),
+  yaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Home Team Win Probability&amp;#39;&lt;/span&gt;)) %&amp;gt;%
+layout(annotations = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(kb, ad))
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This R code yields the following chart:&lt;/p&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~benfb/0.embed&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;For comparison, the Fangraph&amp;rsquo;s win expectancy graph is &lt;a href=&#34;http://www.fangraphs.com/wins.aspx?date=2016-05-10&amp;amp;team=Cubs&amp;amp;dh=0&amp;amp;season=2016&#34;&gt;here&lt;/a&gt;, and you can find
+the full video of the game on &lt;a href=&#34;https://www.youtube.com/watch?v=wGqoB_8hNtw&#34;&gt;MLB&amp;rsquo;s YouTube channel&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The next step will be to automate this process and look into self-hosting
+the graphs instead of going through Plotly&amp;rsquo;s rate-limited API.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;The date in the title of this video is actually incorrect. It&amp;rsquo;s actually the game from May 10th.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
