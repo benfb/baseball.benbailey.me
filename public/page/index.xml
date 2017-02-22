@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Ben Does Baseball</title>
+    <link>https://baseball.benbailey.me/page/index.xml</link>
+    <description>Recent content in Pages on Ben Does Baseball</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Feb 2017 18:54:36 -0500</lastBuildDate>
+    <atom:link href="https://baseball.benbailey.me/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Schedule</title>
+      <link>https://baseball.benbailey.me/schedule</link>
+      <pubDate>Tue, 21 Feb 2017 18:54:36 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/schedule</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/&#34;&gt;2017-02-14&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set up blog&lt;/li&gt;
+&lt;li&gt;Look into win probability calculation&lt;/li&gt;
+&lt;li&gt;Make a nice probability graph&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/02/an-app/&#34;&gt;2017-02-21&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create Shiny app&lt;/li&gt;
+&lt;li&gt;Move graphs to Shiny&lt;/li&gt;
+&lt;li&gt;Automate creation of graphs&lt;/li&gt;
+&lt;li&gt;Set up hosting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

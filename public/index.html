@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://baseball.benbailey.me/css/poole.css">
   <link rel="stylesheet" href="https://baseball.benbailey.me/css/syntax.css">
   <link rel="stylesheet" href="https://baseball.benbailey.me/css/hyde.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Fugaz+One">
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
@@ -40,7 +40,7 @@
     <ul class="sidebar-nav">
       <li><a href="/">Home</a> </li>
       
-        <li><a href="/2017/02/descriptions-and-probabilities/"> Descriptions and Probabilities </a></li>
+        <li><a href="/schedule"> Schedule </a></li>
       
     </ul>
 
@@ -53,6 +53,38 @@
 <div class="posts">
 
       
+        
+  <div class="post">
+    <h1 class="post-title">
+      <a href="https://baseball.benbailey.me/2017/02/an-app/">
+        An App!
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Feb 22, 2017</span>
+
+    <p>This week I made a Shiny interface to the win probability and description services.
+It can be viewed <a href="https://benfb.shinyapps.io/bbbaseball">here</a>. To do this, I had to set up hosting for
+both Shiny and my Elixir backend service. I also switched from embedding/posting
+the plots on Plotly to embedding them in the new Shiny application, which should
+help reduce costs. Learning more about Shiny made implementing the interface
+relatively simple. The generation of the graphs is now abstracted into a
+function that grabs JSON data from the API server I set up, which makes it much
+easier to generate graphs for any desired game.</p>
+
+<p>I would like to make several improvements to the graph next week. Including
+scores would be helpful. Perhaps most interesting would be implementing
+automatic &ldquo;swing-point&rdquo; detection and adding concise labels for the greatest
+win probability changes in a game. Finally, it would be nice if there were a
+way to view which teams played on which days, as right now it&rsquo;s difficult to
+find a game that you want to graph.</p>
+
+  </div>
+    
+  
+        
+  
+        
   <div class="post">
     <h1 class="post-title">
       <a href="https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/">
@@ -60,7 +92,7 @@
       </a>
     </h1>
 
-    <span class="post-date">Tue, Feb 7, 2017</span>
+    <span class="post-date">Wed, Feb 8, 2017</span>
 
     <p>This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
 Using the <code>baseball</code> umbrella application combined with R and Plotly, I generated a win expectancy
@@ -161,6 +193,7 @@ the graphs instead of going through Plotly&rsquo;s rate-limited API.</p>
 </div>
 
   </div>
+    
   
 </div>
 </div>

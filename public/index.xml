@@ -6,13 +6,64 @@
     <description>Recent content on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Feb 2017 18:38:53 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 22 Feb 2017 18:45:40 -0500</lastBuildDate>
     <atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>An App!</title>
+      <link>https://baseball.benbailey.me/2017/02/an-app/</link>
+      <pubDate>Wed, 22 Feb 2017 18:45:40 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2017/02/an-app/</guid>
+      <description>&lt;p&gt;This week I made a Shiny interface to the win probability and description services.
+It can be viewed &lt;a href=&#34;https://benfb.shinyapps.io/bbbaseball&#34;&gt;here&lt;/a&gt;. To do this, I had to set up hosting for
+both Shiny and my Elixir backend service. I also switched from embedding/posting
+the plots on Plotly to embedding them in the new Shiny application, which should
+help reduce costs. Learning more about Shiny made implementing the interface
+relatively simple. The generation of the graphs is now abstracted into a
+function that grabs JSON data from the API server I set up, which makes it much
+easier to generate graphs for any desired game.&lt;/p&gt;
+
+&lt;p&gt;I would like to make several improvements to the graph next week. Including
+scores would be helpful. Perhaps most interesting would be implementing
+automatic &amp;ldquo;swing-point&amp;rdquo; detection and adding concise labels for the greatest
+win probability changes in a game. Finally, it would be nice if there were a
+way to view which teams played on which days, as right now it&amp;rsquo;s difficult to
+find a game that you want to graph.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Schedule</title>
+      <link>https://baseball.benbailey.me/schedule</link>
+      <pubDate>Tue, 21 Feb 2017 18:54:36 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/schedule</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/&#34;&gt;2017-02-14&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set up blog&lt;/li&gt;
+&lt;li&gt;Look into win probability calculation&lt;/li&gt;
+&lt;li&gt;Make a nice probability graph&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/02/an-app/&#34;&gt;2017-02-21&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create Shiny app&lt;/li&gt;
+&lt;li&gt;Move graphs to Shiny&lt;/li&gt;
+&lt;li&gt;Automate creation of graphs&lt;/li&gt;
+&lt;li&gt;Set up hosting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Descriptions and Probabilities</title>
       <link>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</link>
-      <pubDate>Tue, 07 Feb 2017 18:38:53 -0500</pubDate>
+      <pubDate>Wed, 08 Feb 2017 18:38:53 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</guid>
       <description>&lt;p&gt;This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.

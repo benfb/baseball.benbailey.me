@@ -7,9 +7,9 @@ pygmentscodefences = true
 
 [permalinks]
     post = "/:year/:month/:filename/"
+    page = "/:filename"
 
 [params]
   themeColor = "theme-base-09"
   highlight = "sunburst"
   description = "A home for Ben Bailey's baseball analytics projects."
-  # copyright = "Ben Bailey"

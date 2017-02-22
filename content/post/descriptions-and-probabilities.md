@@ -1,11 +1,9 @@
 +++
 Description = ""
-menu = "main"
 Categories = ["Development","GoLang"]
 Tags = ["Development","golang"]
-date = "2017-02-07T18:38:53-05:00"
+date = "2017-02-08T18:38:53-05:00"
 title = "Descriptions and Probabilities"
-
 +++
 
 This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
