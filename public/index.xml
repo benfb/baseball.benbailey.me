@@ -6,8 +6,44 @@
     <description>Recent content on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2017 18:45:40 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 03 Mar 2017 12:46:26 -0500</lastBuildDate>
     <atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Events and Dynamic UI</title>
+      <link>https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/</link>
+      <pubDate>Fri, 03 Mar 2017 12:46:26 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/</guid>
+      <description>&lt;p&gt;This week I focused on improving the usability of the Shiny app. I used Shiny&amp;rsquo;s
+&lt;code&gt;renderUI&lt;/code&gt; function to dynamically generate the options for the game select
+dropdown. I also set up a baseball API &lt;a href=&#34;http://bbbaseball.herokuapp.com&#34;&gt;here&lt;/a&gt;, and added another API
+endpoint to get the list of games that happened on any given day.&lt;/p&gt;
+
+&lt;p&gt;One of the nicer things I added to the Shiny app was the use of the &lt;code&gt;tryCatch&lt;/code&gt;
+function to hide confusing error messages from the user, like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;tryCatch&lt;/span&gt;({
+     splitGames &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;unlist&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;strsplit&lt;/span&gt;(input$game, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot; @ &amp;quot;&lt;/span&gt;))
+     away &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
+     home &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
+
+     data &amp;lt;- getEvents(year, month, day, away, home)
+     sliderInput(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;event&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Event:&amp;quot;&lt;/span&gt;,
+                 min = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, max = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities),
+                 value = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities), sep = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)
+   }, error = &lt;span style=&#34;color: #0000aa&#34;&gt;function&lt;/span&gt;(e) {
+     &lt;span style=&#34;color: #0000aa&#34;&gt;stop&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;That is not a valid event&amp;quot;&lt;/span&gt;)
+   })
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In reality, much of my week was spent fighting with R&amp;rsquo;s several methods of
+dealing with strings and arrays. Most of the changes this week were in the front
+end user-facing part of the app, so I&amp;rsquo;m excited to work more on the backend next
+week (maybe finally improving the win probability calculation?). As a side note,
+the app does generally work for spring training games (as long as Gameday is
+working at the moment).&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>An App!</title>
@@ -55,6 +91,14 @@ find a game that you want to graph.&lt;/p&gt;
 &lt;li&gt;Move graphs to Shiny&lt;/li&gt;
 &lt;li&gt;Automate creation of graphs&lt;/li&gt;
 &lt;li&gt;Set up hosting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improve Shiny UI&lt;/li&gt;
+&lt;li&gt;Improve Shiny UX&lt;/li&gt;
+&lt;li&gt;Add API endpoints to support the above improvements&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>

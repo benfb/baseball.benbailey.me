@@ -32,6 +32,14 @@
 &lt;li&gt;Automate creation of graphs&lt;/li&gt;
 &lt;li&gt;Set up hosting&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improve Shiny UI&lt;/li&gt;
+&lt;li&gt;Improve Shiny UX&lt;/li&gt;
+&lt;li&gt;Add API endpoints to support the above improvements&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>

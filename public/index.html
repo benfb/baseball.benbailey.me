@@ -57,6 +57,47 @@
         
   <div class="post">
     <h1 class="post-title">
+      <a href="https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/">
+        Events and Dynamic UI
+      </a>
+    </h1>
+
+    <span class="post-date">Fri, Mar 3, 2017</span>
+
+    <p>This week I focused on improving the usability of the Shiny app. I used Shiny&rsquo;s
+<code>renderUI</code> function to dynamically generate the options for the game select
+dropdown. I also set up a baseball API <a href="http://bbbaseball.herokuapp.com">here</a>, and added another API
+endpoint to get the list of games that happened on any given day.</p>
+
+<p>One of the nicer things I added to the Shiny app was the use of the <code>tryCatch</code>
+function to hide confusing error messages from the user, like this:</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">tryCatch</span>({
+     splitGames &lt;- <span style="color: #0000aa">unlist</span>(<span style="color: #0000aa">strsplit</span>(input$game, <span style="color: #aa5500">&quot; @ &quot;</span>))
+     away &lt;- teams[<span style="color: #0000aa">which</span>(<span style="color: #0000aa">grepl</span>(splitGames[<span style="color: #009999">1</span>], <span style="color: #0000aa">names</span>(teams)))]
+     home &lt;- teams[<span style="color: #0000aa">which</span>(<span style="color: #0000aa">grepl</span>(splitGames[<span style="color: #009999">2</span>], <span style="color: #0000aa">names</span>(teams)))]
+
+     data &lt;- getEvents(year, month, day, away, home)
+     sliderInput(<span style="color: #aa5500">&quot;event&quot;</span>, <span style="color: #aa5500">&quot;Event:&quot;</span>,
+                 min = <span style="color: #009999">1</span>, max = <span style="color: #0000aa">length</span>(data$probabilities),
+                 value = <span style="color: #0000aa">length</span>(data$probabilities), sep = <span style="color: #009999">1</span>)
+   }, error = <span style="color: #0000aa">function</span>(e) {
+     <span style="color: #0000aa">stop</span>(<span style="color: #aa5500">&quot;That is not a valid event&quot;</span>)
+   })
+</pre></div>
+
+<p>In reality, much of my week was spent fighting with R&rsquo;s several methods of
+dealing with strings and arrays. Most of the changes this week were in the front
+end user-facing part of the app, so I&rsquo;m excited to work more on the backend next
+week (maybe finally improving the win probability calculation?). As a side note,
+the app does generally work for spring training games (as long as Gameday is
+working at the moment).</p>
+
+  </div>
+    
+  
+        
+  <div class="post">
+    <h1 class="post-title">
       <a href="https://baseball.benbailey.me/2017/02/an-app/">
         An App!
       </a>
