@@ -6,7 +6,7 @@ title = "Carl Edwards Had a Bad Day in a Great Year"
 
 This week I played around with the [`baseballr`][baseballr] package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R[^1].
 
-I've been particularly intrigued recently by [Carl Edwards Jr.][cej], a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn't aware quite how good he was until I calculated wOBA allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game's top closers and the game's best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:
+I've been particularly intrigued recently by [Carl Edwards Jr.][cej], a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn't aware quite how good he was until I calculated [wOBA][woba] allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game's top closers and the game's best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:
 
 | Name | IP | ERA | WHIP | BABIP | FIP | wOBA |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -107,8 +107,7 @@ Adding in the second bad outing makes the numbers more similar, lending credence
 
 Carl Edwards had a quietly great year out of the bullpen for the Cubs. He was among the league leaders in wOBA-against, which is initially surprising based on his peripheral numbers. Upon removing an outing where the spin rate and velocity on his signature pitch took a steep downturn, Edwards' peripheral numbers match up more closely with the type of performance you'd expect from someone in that elite group of pitchers. Carl Edwards had a bad day—here's to more good ones.
 
-
-
+[woba]: http://www.fangraphs.com/library/offense/woba/
 [baseballr]: http://billpetti.github.io/baseballr
 [cej]: http://www.baseball-reference.com/players/e/edwarca01.shtml
 [log]: http://www.baseball-reference.com/players/gl.fcgi?id=edwarca01&t=p&year=2016
