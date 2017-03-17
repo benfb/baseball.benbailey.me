@@ -62,7 +62,7 @@ cej <- scrape_statcast_savant_pitcher(start_date = "2016-04-06", end_date = "201
 |     FF     | Federowicz  |  9  |  95.77  |       183        |     95.5      |  1.96%  |
 |     FF     | Contreras  | 204 |  95.44  |      199.4       |     85.94     |  44.44%  |
 
-From the table, we can see that Edwards throws two main pitches—a four-seam fastball and a curveball. He pitched most often to Willson Contreras, then Miguel Montero, then David Ross (and once to Tim Federowicz). Edwards threw his fastball a notch faster to Ross than other catchers, which could be due to the small sample size. He also threw his fastball more to Ross than other catchers: despite throwing 16.67% of his curveballs to ross, he threw 21.57% of his fastballs to him. There are several reasons this might be the case:
+From the table, we can see that Edwards throws two main pitches—a four-seam fastball and a curveball. He pitched most often to Willson Contreras, then Miguel Montero, then David Ross (and once to Tim Federowicz). Edwards threw his fastball a notch faster to Ross than other catchers, which could be due to the small sample size. He also threw his fastball more to Ross than other catchers: despite throwing 16.67% of his curveballs to Ross, he threw 21.57% of his fastballs to him. There are several reasons this might be the case:
 
 1. Edwards focused on his fastball earlier in the season before gaining more confidence in his curve.
 2. Ross saw that Edwards' fastball was producing better results and called it more often.
