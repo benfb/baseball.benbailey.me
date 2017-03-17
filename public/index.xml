@@ -6,8 +6,350 @@
     <description>Recent content on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Mar 2017 12:46:26 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 16 Mar 2017 11:48:35 -0500</lastBuildDate>
     <atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Carl Edwards Had a Bad Day in a Great Year</title>
+      <link>https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/</link>
+      <pubDate>Thu, 16 Mar 2017 11:48:35 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/</guid>
+      <description>&lt;p&gt;This week I played around with the &lt;a href=&#34;http://billpetti.github.io/baseballr&#34;&gt;&lt;code&gt;baseballr&lt;/code&gt;&lt;/a&gt; package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been particularly intrigued recently by &lt;a href=&#34;http://www.baseball-reference.com/players/e/edwarca01.shtml&#34;&gt;Carl Edwards Jr.&lt;/a&gt;, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&amp;rsquo;t aware quite how good he was until I calculated wOBA allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&amp;rsquo;s top closers and the game&amp;rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;IP&lt;/th&gt;
+&lt;th&gt;ERA&lt;/th&gt;
+&lt;th&gt;WHIP&lt;/th&gt;
+&lt;th&gt;BABIP&lt;/th&gt;
+&lt;th&gt;FIP&lt;/th&gt;
+&lt;th&gt;wOBA&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Zach Britton&lt;/td&gt;
+&lt;td&gt;67.0&lt;/td&gt;
+&lt;td&gt;0.54&lt;/td&gt;
+&lt;td&gt;0.836&lt;/td&gt;
+&lt;td&gt;0.231&lt;/td&gt;
+&lt;td&gt;1.80&lt;/td&gt;
+&lt;td&gt;0.188&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Kenley Jansen&lt;/td&gt;
+&lt;td&gt;68.2&lt;/td&gt;
+&lt;td&gt;1.83&lt;/td&gt;
+&lt;td&gt;0.670&lt;/td&gt;
+&lt;td&gt;0.244&lt;/td&gt;
+&lt;td&gt;1.34&lt;/td&gt;
+&lt;td&gt;0.188&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Carl Edwards&lt;/td&gt;
+&lt;td&gt;36.0&lt;/td&gt;
+&lt;td&gt;3.75&lt;/td&gt;
+&lt;td&gt;0.806&lt;/td&gt;
+&lt;td&gt;0.162&lt;/td&gt;
+&lt;td&gt;2.79&lt;/td&gt;
+&lt;td&gt;0.201&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Clayton Kershaw&lt;/td&gt;
+&lt;td&gt;149.2&lt;/td&gt;
+&lt;td&gt;1.68&lt;/td&gt;
+&lt;td&gt;0.722&lt;/td&gt;
+&lt;td&gt;0.256&lt;/td&gt;
+&lt;td&gt;1.78&lt;/td&gt;
+&lt;td&gt;0.202&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Aroldis Chapman&lt;/td&gt;
+&lt;td&gt;58.0&lt;/td&gt;
+&lt;td&gt;1.55&lt;/td&gt;
+&lt;td&gt;0.862&lt;/td&gt;
+&lt;td&gt;0.268&lt;/td&gt;
+&lt;td&gt;1.42&lt;/td&gt;
+&lt;td&gt;0.206&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Andrew Miller&lt;/td&gt;
+&lt;td&gt;74.1&lt;/td&gt;
+&lt;td&gt;1.45&lt;/td&gt;
+&lt;td&gt;0.686&lt;/td&gt;
+&lt;td&gt;0.258&lt;/td&gt;
+&lt;td&gt;1.68&lt;/td&gt;
+&lt;td&gt;0.209&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Edwards stands out negatively in several respects here. He pitched the least innings out of that group by far, and was almost certainly put in the least stressful situations. His ERA is almost two points higher than the next highest&amp;rsquo;s, and his FIP is nearly a point higher than Britton&amp;rsquo;s, the second highest mark. His BABIP is also remarkably low, due in part to luck and in part to the Cubs&amp;rsquo; historically good defense. So why is his wOBA so remarkable?&lt;/p&gt;
+
+&lt;p&gt;Looking through Edwards&amp;rsquo; &lt;a href=&#34;http://www.baseball-reference.com/players/gl.fcgi?id=edwarca01&amp;amp;t=p&amp;amp;year=2016&#34;&gt;game log&lt;/a&gt;, two bad appearances stand out:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;August 13th, where he allowed five runs on one hit and four walks while recording just two outs.&lt;/li&gt;
+&lt;li&gt;September 17th, where he allowed three runs on three hits (two of them home runs) in an inning&amp;rsquo;s work.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we remove the August 13th outing, Edwards&amp;rsquo; ERA drops to &lt;code&gt;2.55&lt;/code&gt;, almost an entire point. If we remove the September 17th outing as well, it drops to &lt;code&gt;1.83&lt;/code&gt;. Removing the first performance, his FIP drops to &lt;code&gt;2.56&lt;/code&gt;. Removing the other brings it down to &lt;code&gt;1.96&lt;/code&gt;, which is still higher than the other five pitchers (possibly due to his BABIP) but much closer. Bad pitching performances are part of a pitcher&amp;rsquo;s year, and shouldn&amp;rsquo;t be entirely disregarded. However, it seems likely that &lt;em&gt;something&lt;/em&gt; was off (mechanically, physically, or mentally) on August 13th.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll get back to these games later.&lt;/p&gt;
+
+&lt;p&gt;As the Cubs consistently carried three catchers last season, I thought it would be interesting to compare Edwards&amp;rsquo; performance across all three:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;cej_by_catcher &amp;lt;- cej %&amp;gt;%
+  group_by(pitch_type, catcher) %&amp;gt;%
+  summarize(n = n(),
+            avg_mph = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.numeric&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.character&lt;/span&gt;(start_speed)), na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_spin = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.numeric&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.character&lt;/span&gt;(spin_rate)), na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_hit_distance = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_distance_sc, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_hit_speed = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_speed, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_hit_angle = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_angle, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_barrel = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(barrel, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
+            avg_ext = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(release_extension, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;)) %&amp;gt;%
+  mutate(pitch_pct = n/&lt;span style=&#34;color: #0000aa&#34;&gt;sum&lt;/span&gt;(n)) %&amp;gt;%
+  filter(pitch_type != &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;CH&amp;quot;&lt;/span&gt;, pitch_type != &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;IN&amp;quot;&lt;/span&gt;) &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# These each occur once and may be mistakes&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;baseballr&lt;/code&gt; package also allows us to look at Statcast data from Baseball Savant:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;cej &amp;lt;- scrape_statcast_savant_pitcher(start_date = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-04-06&amp;quot;&lt;/span&gt;, end_date = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-10-15&amp;quot;&lt;/span&gt;, pitcherid = &lt;span style=&#34;color: #009999&#34;&gt;605218&lt;/span&gt;)
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;type&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;catcher&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;count&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;mph&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;hit_dist&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;hit_spd&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;pct&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ross&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;27&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;81.16&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;119&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;73.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;16.67%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Montero&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;53&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;81.54&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;258.8&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;94.86&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;32.72%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Federowicz&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;81.25&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.85%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Contreras&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;79&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;81.02&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;208.8&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;87.74&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;48.77%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ross&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;99&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95.72&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;186.8&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;84.31&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;21.57%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Montero&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;147&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95.44&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;211.1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;83.77&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;32.03%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Federowicz&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;9&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95.77&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;183&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95.5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.96%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Contreras&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;204&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95.44&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;199.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;85.94&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;44.44%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;From the table, we can see that Edwards throws two main pitches—a four-seam fastball and a curveball. He pitched most often to Willson Contreras, then Miguel Montero, then David Ross (and once to Tim Federowicz). Edwards threw his fastball a notch faster to Ross than other catchers, which could be due to the small sample size. He also threw his fastball more to Ross than other catchers: despite throwing 16.67% of his curveballs to ross, he threw 21.57% of his fastballs to him. There are several reasons this might be the case:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Edwards focused on his fastball earlier in the season before gaining more confidence in his curve.&lt;/li&gt;
+&lt;li&gt;Ross saw that Edwards&amp;rsquo; fastball was producing better results and called it more often.&lt;/li&gt;
+&lt;li&gt;Contreras was more confident in his agility and therefore ability to block a curveball than Ross was.&lt;/li&gt;
+&lt;li&gt;Random sampling and a small sample size.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let&amp;rsquo;s take a look at the results these pitches got. By plotting hit velocity and hit distance, we can compare results across catchers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cevd1.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When Ross was catching, Edwards tended to generate softer contact that went shorter distances. We can use the Statcast data to see why that is.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cesv1.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This chart, plotting spin against pitch velocity, shows something interesting: Edwards&amp;rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&amp;rsquo; style, and that was maximized when Ross was catching. Of course, this isn&amp;rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&amp;rsquo; numbers if we take away the two worst games in Edwards&amp;rsquo; season.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cevd2.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Already we see that removing the two bad outings brings Contreras much closer to Ross and  Montero in terms of average hit speed and hit distance. Now we can look at how removing the bad outing affects velocity and spin.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cesv2.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There isn&amp;rsquo;t any effect on the spin of Edwards&amp;rsquo; curveball while Contreras is catching, but the spin on his fastball gets much closer to Ross than Montero. Let&amp;rsquo;s compare Edwards&amp;rsquo; Statcast data between the August 13th outing and his overall averages (the bolded rows are from the 13th):&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;MPH&lt;/th&gt;
+&lt;th&gt;Spin&lt;/th&gt;
+&lt;th&gt;Ext&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;FF&lt;/td&gt;
+&lt;td&gt;95.55&lt;/td&gt;
+&lt;td&gt;1876&lt;/td&gt;
+&lt;td&gt;6.85&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;94.60&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1602&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;6.73&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CU&lt;/td&gt;
+&lt;td&gt;81.20&lt;/td&gt;
+&lt;td&gt;1605&lt;/td&gt;
+&lt;td&gt;6.31&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CU&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;81.49&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1480&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;6.19&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If we add in the other poor outing:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;MPH&lt;/th&gt;
+&lt;th&gt;Spin&lt;/th&gt;
+&lt;th&gt;Ext&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;FF&lt;/td&gt;
+&lt;td&gt;95.54&lt;/td&gt;
+&lt;td&gt;1873&lt;/td&gt;
+&lt;td&gt;6.85&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;95.08&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1749&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;6.74&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CU&lt;/td&gt;
+&lt;td&gt;81.23&lt;/td&gt;
+&lt;td&gt;1610&lt;/td&gt;
+&lt;td&gt;6.31&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CU&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;81.12&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1502&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;6.26&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Adding in the second bad outing makes the numbers more similar, lending credence to the idea that the first outing was an outlier. On August 13th the spin on his fastball, his extension, and his velocity were all down a tick.&lt;/p&gt;
+
+&lt;p&gt;Carl Edwards had a quietly great year out of the bullpen for the Cubs. He was among the league leaders in wOBA-against, which is initially surprising based on his peripheral numbers. Upon removing an outing where the spin rate and velocity on his signature pitch took a steep downturn, Edwards&amp;rsquo; peripheral numbers match up more closely with the type of performance you&amp;rsquo;d expect from someone in that elite group of pitchers. Carl Edwards had a bad day—here&amp;rsquo;s to more good ones.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;As part of this analysis, I defined a function &lt;code&gt;playername_lookup&lt;/code&gt; that gets a player&amp;rsquo;s name from their MLBAM id (this function is based on the &lt;code&gt;playerid_lookup&lt;/code&gt; function from the &lt;code&gt;baseballr&lt;/code&gt; package). It is provided &lt;a href=&#34;https://gist.github.com/benfb/c2be996bcdbf0b1fa9f7f544fceb2934&#34;&gt;here&lt;/a&gt; for reference.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/&#34;&gt;http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Events and Dynamic UI</title>
@@ -93,12 +435,20 @@ find a game that you want to graph.&lt;/p&gt;
 &lt;li&gt;Set up hosting&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/carl-edwards-jr/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Improve Shiny UI&lt;/li&gt;
 &lt;li&gt;Improve Shiny UX&lt;/li&gt;
 &lt;li&gt;Add API endpoints to support the above improvements&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[2017-03-21][4]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Research win probability modeling&lt;/li&gt;
+&lt;li&gt;Play around with baseballr package&lt;/li&gt;
+&lt;li&gt;Practice more specific analysis&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
