@@ -6,8 +6,52 @@
     <description>Recent content on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Mar 2017 11:48:35 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 22 Mar 2017 23:15:00 -0400</lastBuildDate>
     <atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tracing Starter Performance by Inning</title>
+      <link>https://baseball.benbailey.me/2017/03/starters-through-innings/</link>
+      <pubDate>Wed, 22 Mar 2017 23:15:00 -0400</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2017/03/starters-through-innings/</guid>
+      <description>&lt;p&gt;The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The x-axis for each of these graphs is innings. The y-axis varies based on the metric being measured.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Velocity&lt;/strong&gt;
+&lt;img src=&#34;https://baseball.benbailey.me/images/starters/velo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every pitcher except Scherzer and Verlander (both past Tigers, coincidentally) featured 2-3 pitches that had very similar velocity at the top of the charts. All the pitchers featured a curveball of some sort that averaged below 80 mph except Kluber whose averaged 84+ mph.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spin&lt;/strong&gt;
+&lt;img src=&#34;https://baseball.benbailey.me/images/starters/spin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kyle Hendricks&amp;rsquo; spin rate varies wildly from inning to inning. His pitches are grouped closer together, which plays into his strategy of deceiving hitters with consistency until it&amp;rsquo;s too late. Hendricks also has one of the lower average spin rates, with only Kluber&amp;rsquo;s chart having the same axis. In contrast, David Price throws three pitches that all had an average spin rate of over 2000 throughout the entire game. Max Scherzer&amp;rsquo;s slider, on the other hand, spun around 1/4th as much on average.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Break&lt;/strong&gt;
+&lt;img src=&#34;https://baseball.benbailey.me/images/starters/break.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Curveballs tend to have the greatest average break, followed by changeups, sliders, and sinkers, with cutters and two- and four-seam fastballs at the bottom. Curveball break tends to go down in the ninth inning.&lt;/p&gt;
+
+&lt;p&gt;In terms of more general observations, check out Johnny Cueto&amp;rsquo;s remarkably inconsistent curveball. The pitch varies the most in all three metrics inning-to-inning, and he didn&amp;rsquo;t throw it past the seventh inning. Of course, he only threw it 11 times all season, and only twice in a day once. He never threw it with a runner on base, and preferred to throw it with nobody out. The pitch had pretty good results: five balls, three called strikes, one swinging strike, a groundout and a popout.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Batted ball exit velocity&lt;/strong&gt;
+&lt;img src=&#34;https://baseball.benbailey.me/images/starters/hitspeed.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Batted ball distance&lt;/strong&gt;
+&lt;img src=&#34;https://baseball.benbailey.me/images/starters/hitdistance.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;The code for this analysis is &lt;a href=&#34;https://gist.github.com/benfb/bc3ce96cdd00bb011f06aa34e183b4d9&#34;&gt;here&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Carl Edwards Had a Bad Day in a Great Year</title>
@@ -15,7 +59,9 @@
       <pubDate>Thu, 16 Mar 2017 11:48:35 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/</guid>
-      <description>&lt;p&gt;This week I played around with the &lt;a href=&#34;http://billpetti.github.io/baseballr&#34;&gt;&lt;code&gt;baseballr&lt;/code&gt;&lt;/a&gt; package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;This post was featured on the Fangraphs community blog &lt;a href=&#34;http://www.fangraphs.com/community/carl-edwards-had-a-bad-day-in-a-great-year/&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This week I played around with the &lt;a href=&#34;http://billpetti.github.io/baseballr&#34;&gt;&lt;code&gt;baseballr&lt;/code&gt;&lt;/a&gt; package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been particularly intrigued recently by &lt;a href=&#34;http://www.baseball-reference.com/players/e/edwarca01.shtml&#34;&gt;Carl Edwards Jr.&lt;/a&gt;, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&amp;rsquo;t aware quite how good he was until I calculated &lt;a href=&#34;http://www.fangraphs.com/library/offense/woba/&#34;&gt;wOBA&lt;/a&gt; allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&amp;rsquo;s top closers and the game&amp;rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:&lt;/p&gt;
 
@@ -435,7 +481,7 @@ find a game that you want to graph.&lt;/p&gt;
 &lt;li&gt;Set up hosting&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/carl-edwards-jr/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/&#34;&gt;2017-03-03&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Improve Shiny UI&lt;/li&gt;
@@ -443,12 +489,19 @@ find a game that you want to graph.&lt;/p&gt;
 &lt;li&gt;Add API endpoints to support the above improvements&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;[2017-03-21][4]&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/&#34;&gt;2017-03-22&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Research win probability modeling&lt;/li&gt;
 &lt;li&gt;Play around with baseballr package&lt;/li&gt;
 &lt;li&gt;Practice more specific analysis&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://baseball.benbailey.me/2017/03/starters-through-innings/&#34;&gt;2017-03-29&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Modeling pitcher performance by inning&lt;/li&gt;
+&lt;li&gt;Combining ggplot plots&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>

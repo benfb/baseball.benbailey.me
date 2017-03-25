@@ -22,13 +22,18 @@ date = "2017-02-21T18:54:36-05:00"
   * Improve Shiny UX
   * Add API endpoints to support the above improvements
 
-4. [2017-03-21][4]
+4. [2017-03-22][4]
   * Research win probability modeling
   * Play around with baseballr package
   * Practice more specific analysis
+
+5. [2017-03-29][5]
+  * Modeling pitcher performance by inning
+  * Combining ggplot plots
 
 
 [1]: https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/
 [2]: https://baseball.benbailey.me/2017/02/an-app/
 [3]: https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/
-[3]: https://baseball.benbailey.me/2017/03/carl-edwards-jr/
+[4]: https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/
+[5]: https://baseball.benbailey.me/2017/03/starters-through-innings/

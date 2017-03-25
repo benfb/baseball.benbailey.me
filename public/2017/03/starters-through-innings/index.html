@@ -1,0 +1,98 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.19" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Tracing Starter Performance by Inning &middot; Ben Does Baseball</title>
+  
+
+  
+  <link rel="stylesheet" href="https://baseball.benbailey.me/css/poole.css">
+  <link rel="stylesheet" href="https://baseball.benbailey.me/css/syntax.css">
+  <link rel="stylesheet" href="https://baseball.benbailey.me/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Fugaz+One">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Ben Does Baseball" />
+</head>
+
+	<body class="theme-base-09 ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://baseball.benbailey.me/"><h1>Ben Does Baseball</h1></a>
+      <p class="lead">
+       A home for Ben Bailey&#39;s baseball analytics projects. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      <li><a href="https://github.com/benfb/baseball">Code</a> </li>
+      
+        <li><a href="/schedule"> Schedule </a></li>
+      
+    </ul>
+
+    <p>&copy; 2017. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Tracing Starter Performance by Inning</h1>
+			  <span class="post-date">Wed, Mar 22, 2017</span>
+			      <p>The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<p><em>The x-axis for each of these graphs is innings. The y-axis varies based on the metric being measured.</em></p>
+
+<p><strong>Velocity</strong>
+<img src="/images/starters/velo.png" alt="" /></p>
+
+<p>Every pitcher except Scherzer and Verlander (both past Tigers, coincidentally) featured 2-3 pitches that had very similar velocity at the top of the charts. All the pitchers featured a curveball of some sort that averaged below 80 mph except Kluber whose averaged 84+ mph.</p>
+
+<p><strong>Spin</strong>
+<img src="/images/starters/spin.png" alt="" /></p>
+
+<p>Kyle Hendricks&rsquo; spin rate varies wildly from inning to inning. His pitches are grouped closer together, which plays into his strategy of deceiving hitters with consistency until it&rsquo;s too late. Hendricks also has one of the lower average spin rates, with only Kluber&rsquo;s chart having the same axis. In contrast, David Price throws three pitches that all had an average spin rate of over 2000 throughout the entire game. Max Scherzer&rsquo;s slider, on the other hand, spun around 1/4th as much on average.</p>
+
+<p><strong>Break</strong>
+<img src="/images/starters/break.png" alt="" /></p>
+
+<p>Curveballs tend to have the greatest average break, followed by changeups, sliders, and sinkers, with cutters and two- and four-seam fastballs at the bottom. Curveball break tends to go down in the ninth inning.</p>
+
+<p>In terms of more general observations, check out Johnny Cueto&rsquo;s remarkably inconsistent curveball. The pitch varies the most in all three metrics inning-to-inning, and he didn&rsquo;t throw it past the seventh inning. Of course, he only threw it 11 times all season, and only twice in a day once. He never threw it with a runner on base, and preferred to throw it with nobody out. The pitch had pretty good results: five balls, three called strikes, one swinging strike, a groundout and a popout.</p>
+
+<p><strong>Batted ball exit velocity</strong>
+<img src="/images/starters/hitspeed.png" alt="" /></p>
+
+<p><strong>Batted ball distance</strong>
+<img src="/images/starters/hitdistance.png" alt="" /></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">The code for this analysis is <a href="https://gist.github.com/benfb/bc3ce96cdd00bb011f06aa34e183b4d9">here</a>.
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
