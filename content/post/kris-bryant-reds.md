@@ -11,7 +11,7 @@ This is what Kris Bryant did to normal pitching in 699 plate appearances:
 
 | BA | HR | OBP | SLG | OPS+ |
 | --- | --- | --- | --- | --- |
-| .292 | 39 | .385 | .554 | 149 |
+| .292 | 29 | .385 | .554 | 149 |
 
 This is what Kris Bryant did to Reds pitching in 88 plate appearances:
 
