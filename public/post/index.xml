@@ -6,20 +6,20 @@
     <description>Recent content in Posts on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Apr 2017 18:48:26 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 05 Apr 2017 18:48:26 -0400</lastBuildDate>
     <atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Kris Bryant Loves the Reds</title>
       <link>https://baseball.benbailey.me/2017/04/kris-bryant-reds/</link>
-      <pubDate>Tue, 04 Apr 2017 18:48:26 -0400</pubDate>
+      <pubDate>Wed, 05 Apr 2017 18:48:26 -0400</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/04/kris-bryant-reds/</guid>
       <description>&lt;p&gt;Kris Bryant was very good last year. The Reds were&amp;hellip;not great last year. In fact, the Reds&amp;rsquo; bullpen was historically bad. Early in the season they &lt;a href=&#34;http://m.mlb.com/news/article/176059016/reds-bullpen-has-record-streak-allowing-runs/&#34;&gt;set a record for consecutive games allowing at least one run&lt;/a&gt;, and later in the season they &lt;a href=&#34;http://m.reds.mlb.com/news/article/201830542/reds-bullpens-sets-record-for-homers-allowed/&#34;&gt;set a record for home runs allowed&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Kris Bryant, of course, was the National League MVP.&lt;/p&gt;
 
-&lt;p&gt;This is what Kris Bryant did to normal pitching in 699 plate appearances:&lt;/p&gt;
+&lt;p&gt;This is what the MVP did against normal pitching in 699 plate appearances:&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -67,7 +67,11 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;More than 25% of his home runs were against the Reds. A more modest 20.7% of his extra-base hits were against the Reds.&lt;/p&gt;
+&lt;p&gt;tOPS+ is a measure of how well a player performed in this split as opposed to their average. Imagine a normal Major League Baseball player. Now imagine Kris Bryant. The difference between these two players is less than the difference between Kris Bryant being pitched to by the Reds and normal Kris Bryant. Against-Reds Kris Bryant is to normal Kris Bryant as normal Kris Bryant is to a league-average hitter.&lt;/p&gt;
+
+&lt;p&gt;sOPS+ shows how well a player performed in a split compared to the league average in that split. Bryant&amp;rsquo;s sOPS+ against the Reds was 211. That speaks for itself.&lt;/p&gt;
+
+&lt;p&gt;In fact, more than 25% of Bryant&amp;rsquo;s home runs were against the Reds. A more modest 20.7% of his extra-base hits were against them.&lt;/p&gt;
 
 &lt;p&gt;This was Reds pitching against everyone:&lt;/p&gt;
 
@@ -78,7 +82,7 @@
 &lt;th&gt;BA&lt;/th&gt;
 &lt;th&gt;HR&lt;/th&gt;
 &lt;th&gt;K/BB&lt;/th&gt;
-&lt;th&gt;OPS+&lt;/th&gt;
+&lt;th&gt;sOPS+&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
@@ -117,9 +121,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;tOPS+ is a measure of how well a player performed in this split as opposed to their average. Against-Reds Kris Bryant is to normal Kris Bryant as normal Kris Bryant is to a league-average hitter.&lt;/p&gt;
-
-&lt;p&gt;sOPS+ shows how well a player performed in a split compared to the league average in that split. Bryant&amp;rsquo;s sOPS+ against the Reds was 211. That speaks for itself.&lt;/p&gt;
+&lt;p&gt;So the Reds were worse against the Cubs than against the league as a whole.&lt;/p&gt;
 
 &lt;p&gt;The advanced batted ball data backs up Bryant&amp;rsquo;s Reds dominance:&lt;/p&gt;
 
@@ -152,6 +154,21 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;Against the Reds, Bryant&amp;rsquo;s batted ball profile had a more optimal launch angle and greater velocity, distance, and barrel frequency.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The code for this analysis is located here.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Much of the data for this post was collected from Baseball Reference.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;http://m.mlb.com/glossary/statcast/barreled-ball&#34;&gt;http://m.mlb.com/glossary/statcast/barreled-ball&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;https://gist.github.com/benfb/d4c85ba9aac3ad8d5e0c3304eb2d696a&#34;&gt;https://gist.github.com/benfb/d4c85ba9aac3ad8d5e0c3304eb2d696a&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
