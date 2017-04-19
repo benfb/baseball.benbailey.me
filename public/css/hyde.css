@@ -36,12 +36,12 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -67,6 +67,7 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+    font-size: 20px;
   }
 }
 
@@ -247,4 +248,13 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* Cubs */
+.theme-base-cubs .sidebar {
+  background-color: #165b88;
+}
+.theme-base-cubs .content a,
+.theme-base-cubs .related-posts li a:hover {
+  color: #b9434b;
 }
