@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on Ben Does Baseball</title>
-    <link>https://baseball.benbailey.me/tags/golang/index.xml</link>
+    <link>https://baseball.benbailey.me/tags/golang/</link>
     <description>Recent content in Golang on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://baseball.benbailey.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2017 12:46:26 -0500</lastBuildDate>
+    
+	<atom:link href="https://baseball.benbailey.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Events and Dynamic UI</title>
@@ -14,34 +17,8 @@
       <pubDate>Fri, 03 Mar 2017 12:46:26 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/</guid>
-      <description>&lt;p&gt;This week I focused on improving the usability of the Shiny app. I used Shiny&amp;rsquo;s
-&lt;code&gt;renderUI&lt;/code&gt; function to dynamically generate the options for the game select
-dropdown. I also set up a baseball API &lt;a href=&#34;http://bbbaseball.herokuapp.com&#34;&gt;here&lt;/a&gt;, and added another API
-endpoint to get the list of games that happened on any given day.&lt;/p&gt;
-
-&lt;p&gt;One of the nicer things I added to the Shiny app was the use of the &lt;code&gt;tryCatch&lt;/code&gt;
-function to hide confusing error messages from the user, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;tryCatch&lt;/span&gt;({
-     splitGames &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;unlist&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;strsplit&lt;/span&gt;(input$game, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot; @ &amp;quot;&lt;/span&gt;))
-     away &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
-     home &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
-
-     data &amp;lt;- getEvents(year, month, day, away, home)
-     sliderInput(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;event&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Event:&amp;quot;&lt;/span&gt;,
-                 min = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, max = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities),
-                 value = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities), sep = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)
-   }, error = &lt;span style=&#34;color: #0000aa&#34;&gt;function&lt;/span&gt;(e) {
-     &lt;span style=&#34;color: #0000aa&#34;&gt;stop&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;That is not a valid event&amp;quot;&lt;/span&gt;)
-   })
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In reality, much of my week was spent fighting with R&amp;rsquo;s several methods of
-dealing with strings and arrays. Most of the changes this week were in the front
-end user-facing part of the app, so I&amp;rsquo;m excited to work more on the backend next
-week (maybe finally improving the win probability calculation?). As a side note,
-the app does generally work for spring training games (as long as Gameday is
-working at the moment).&lt;/p&gt;
-</description>
+      <description>This week I focused on improving the usability of the Shiny app. I used Shiny&amp;rsquo;s renderUI function to dynamically generate the options for the game select dropdown. I also set up a baseball API here, and added another API endpoint to get the list of games that happened on any given day.
+One of the nicer things I added to the Shiny app was the use of the tryCatch function to hide confusing error messages from the user, like this:</description>
     </item>
     
     <item>
@@ -50,22 +27,7 @@ working at the moment).&lt;/p&gt;
       <pubDate>Wed, 22 Feb 2017 18:45:40 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/02/an-app/</guid>
-      <description>&lt;p&gt;This week I made a Shiny interface to the win probability and description services.
-It can be viewed &lt;a href=&#34;https://benfb.shinyapps.io/bbbaseball&#34;&gt;here&lt;/a&gt;. To do this, I had to set up hosting for
-both Shiny and my Elixir backend service. I also switched from embedding/posting
-the plots on Plotly to embedding them in the new Shiny application, which should
-help reduce costs. Learning more about Shiny made implementing the interface
-relatively simple. The generation of the graphs is now abstracted into a
-function that grabs JSON data from the API server I set up, which makes it much
-easier to generate graphs for any desired game.&lt;/p&gt;
-
-&lt;p&gt;I would like to make several improvements to the graph next week. Including
-scores would be helpful. Perhaps most interesting would be implementing
-automatic &amp;ldquo;swing-point&amp;rdquo; detection and adding concise labels for the greatest
-win probability changes in a game. Finally, it would be nice if there were a
-way to view which teams played on which days, as right now it&amp;rsquo;s difficult to
-find a game that you want to graph.&lt;/p&gt;
-</description>
+      <description>This week I made a Shiny interface to the win probability and description services. It can be viewed here. To do this, I had to set up hosting for both Shiny and my Elixir backend service. I also switched from embedding/posting the plots on Plotly to embedding them in the new Shiny application, which should help reduce costs. Learning more about Shiny made implementing the interface relatively simple. The generation of the graphs is now abstracted into a function that grabs JSON data from the API server I set up, which makes it much easier to generate graphs for any desired game.</description>
     </item>
     
     <item>
@@ -74,104 +36,8 @@ find a game that you want to graph.&lt;/p&gt;
       <pubDate>Wed, 08 Feb 2017 18:38:53 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</guid>
-      <description>&lt;p&gt;This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
-Using the &lt;code&gt;baseball&lt;/code&gt; umbrella application combined with R and Plotly, I generated a win expectancy
-graph for a random game.&lt;/p&gt;
-
-&lt;p&gt;In any given situation, the win expectancy is equivalent to the percentage of games
-that teams in that exact situation went on to win. To calculate the win probability of
-a situation, the application converts the situation into a hash using the number of outs,
-inning, number and position of base runners, and the current score, then looks it up in a
-table of historical win probabilities. This table was calculated using &lt;a href=&#34;https://gregstoll.dyndns.org/~gregstoll/baseball/stats.html&#34;&gt;Greg Stoll&amp;rsquo;s scripts&lt;/a&gt;
-and &lt;a href=&#34;http://www.retrosheet.org&#34;&gt;Retrosheet&lt;/a&gt; data. The code for the win expectancy service can be found
-&lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_win_ex&#34;&gt;here&lt;/a&gt;, and the general downloader&amp;rsquo;s source is &lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_slurper&#34;&gt;here&lt;/a&gt;. What follows
-is an example of a manually-generated win expectancy graph of the game that occurred
-on May 10th of last season between the Padres and the Cubs.&lt;/p&gt;
-
-&lt;p&gt;First, we utilize the two functions &lt;code&gt;probabilities_from_game/2&lt;/code&gt; and &lt;code&gt;descriptions_from_game/2&lt;/code&gt;
-to get vectors of win expectancies and descriptions of every event that occurred in the game:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;iex(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.probabilities_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
-[[&lt;span style=&#34;color: #009999&#34;&gt;0.5652355266525733&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5826495329514373&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.593064127007075&lt;/span&gt;],
- [&lt;span style=&#34;color: #009999&#34;&gt;0.5669081828973761&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5470361185179661&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.534091190836288&lt;/span&gt;],
- [&lt;span style=&#34;color: #009999&#34;&gt;0.5569277494191046&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5742743999613658&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5803200220916497&lt;/span&gt;],...]
-
-iex(&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.descriptions_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
-[[&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Wil Myers flies out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Matt Kemp lines out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;],
- [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Dexter Fowler strikes out swinging.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jason Heyward lines out to center fielder Jon Jay.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Kris Bryant lines out to right fielder Matt Kemp.&amp;quot;&lt;/span&gt;],...]
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;library&lt;/span&gt;(plotly)
-&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_username&amp;quot;&lt;/span&gt; = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;benfb&amp;quot;&lt;/span&gt;)
-&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_api_key&amp;quot;&lt;/span&gt; = API_KEY)
-probabilities &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(PROBABILITY_VECTOR)
-x &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y)
-event &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(DESCRIPTION_VECTOR)
-data &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;data.frame&lt;/span&gt;(x, y, event)
-
-kb &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
-  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
-  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
-  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
-  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
-  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
-  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;K Bryant Double&amp;#39;&lt;/span&gt;,
-  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
-              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
-              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
-  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
-
-ad &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
-  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
-  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
-  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
-  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
-  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
-  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;A Dickerson Home Run&amp;#39;&lt;/span&gt;,
-  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
-              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
-              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
-  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
-
-p &amp;lt;- plot_ly(
-  data,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y),
-  y = probabilities,
-  type = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;scatter&amp;#39;&lt;/span&gt;,
-  mode = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;lines&amp;#39;&lt;/span&gt;,
-  text = event) %&amp;gt;%
-layout(
-  title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;SDN @ CHN 2016-05-10&amp;#39;&lt;/span&gt;,
-  xaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Game Event&amp;#39;&lt;/span&gt;),
-  yaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Home Team Win Probability&amp;#39;&lt;/span&gt;)) %&amp;gt;%
-layout(annotations = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(kb, ad))
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This R code yields the following chart:&lt;/p&gt;
-
-&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~benfb/0.embed&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;For comparison, the Fangraph&amp;rsquo;s win expectancy graph is &lt;a href=&#34;http://www.fangraphs.com/wins.aspx?date=2016-05-10&amp;amp;team=Cubs&amp;amp;dh=0&amp;amp;season=2016&#34;&gt;here&lt;/a&gt;, and you can find
-the full video of the game on &lt;a href=&#34;https://www.youtube.com/watch?v=wGqoB_8hNtw&#34;&gt;MLB&amp;rsquo;s YouTube channel&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;The next step will be to automate this process and look into self-hosting
-the graphs instead of going through Plotly&amp;rsquo;s rate-limited API.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;The date in the title of this video is actually incorrect. It&amp;rsquo;s actually the game from May 10th.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats. Using the baseball umbrella application combined with R and Plotly, I generated a win expectancy graph for a random game.
+In any given situation, the win expectancy is equivalent to the percentage of games that teams in that exact situation went on to win. To calculate the win probability of a situation, the application converts the situation into a hash using the number of outs, inning, number and position of base runners, and the current score, then looks it up in a table of historical win probabilities.</description>
     </item>
     
   </channel>

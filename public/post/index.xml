@@ -2,12 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Ben Does Baseball</title>
-    <link>https://baseball.benbailey.me/post/index.xml</link>
+    <link>https://baseball.benbailey.me/post/</link>
     <description>Recent content in Posts on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Apr 2017 18:48:26 -0400</lastBuildDate>
-    <atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2017 20:50:09 -0400</lastBuildDate>
+    
+	<atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Starters Who Can&#39;t Finish What They Started</title>
+      <link>https://baseball.benbailey.me/2017/04/starters-cant-finish/</link>
+      <pubDate>Wed, 19 Apr 2017 20:50:09 -0400</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2017/04/starters-cant-finish/</guid>
+      <description>Some starters can&amp;rsquo;t finish innings. More specifically, some starters are pretty good at getting two outs, but much worse at getting the third. In looking at potential ways to identify starters who may work better as relievers, I came across Baseball Reference&amp;rsquo;s number of outs splits. To find good candidates for this analysis, I looked at Fangraphs&amp;rsquo; splits leaderboard for worst ERA with two outs. I took the top (or bottom) three pitchers with more than 30 IP: Tyler Duffey, Anibal Sanchez, and Michael Pineda.</description>
+    </item>
     
     <item>
       <title>Kris Bryant Loves the Reds</title>
@@ -15,161 +26,9 @@
       <pubDate>Wed, 05 Apr 2017 18:48:26 -0400</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/04/kris-bryant-reds/</guid>
-      <description>&lt;p&gt;Kris Bryant was very good last year. The Reds were&amp;hellip;not great last year. In fact, the Reds&amp;rsquo; bullpen was historically bad. Early in the season they &lt;a href=&#34;http://m.mlb.com/news/article/176059016/reds-bullpen-has-record-streak-allowing-runs/&#34;&gt;set a record for consecutive games allowing at least one run&lt;/a&gt;, and later in the season they &lt;a href=&#34;http://m.reds.mlb.com/news/article/201830542/reds-bullpens-sets-record-for-homers-allowed/&#34;&gt;set a record for home runs allowed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Kris Bryant, of course, was the National League MVP.&lt;/p&gt;
-
-&lt;p&gt;This is what the MVP did against normal pitching in 699 plate appearances:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;BA&lt;/th&gt;
-&lt;th&gt;HR&lt;/th&gt;
-&lt;th&gt;OBP&lt;/th&gt;
-&lt;th&gt;SLG&lt;/th&gt;
-&lt;th&gt;OPS+&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;.292&lt;/td&gt;
-&lt;td&gt;29&lt;/td&gt;
-&lt;td&gt;.385&lt;/td&gt;
-&lt;td&gt;.554&lt;/td&gt;
-&lt;td&gt;149&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;This is what Kris Bryant did to Reds pitching in 88 plate appearances:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;BA&lt;/th&gt;
-&lt;th&gt;HR&lt;/th&gt;
-&lt;th&gt;OBP&lt;/th&gt;
-&lt;th&gt;SLG&lt;/th&gt;
-&lt;th&gt;tOPS+&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;.364&lt;/td&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;.443&lt;/td&gt;
-&lt;td&gt;.831&lt;/td&gt;
-&lt;td&gt;165&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;tOPS+ is a measure of how well a player performed in this split as opposed to their average. Imagine a normal Major League Baseball player. Now imagine Kris Bryant. The difference between these two players is less than the difference between Kris Bryant being pitched to by the Reds and normal Kris Bryant. Against-Reds Kris Bryant is to normal Kris Bryant as normal Kris Bryant is to a league-average hitter.&lt;/p&gt;
-
-&lt;p&gt;sOPS+ shows how well a player performed in a split compared to the league average in that split. Bryant&amp;rsquo;s sOPS+ against the Reds was 211. That speaks for itself.&lt;/p&gt;
-
-&lt;p&gt;In fact, more than 25% of Bryant&amp;rsquo;s home runs were against the Reds. A more modest 20.7% of his extra-base hits were against them.&lt;/p&gt;
-
-&lt;p&gt;This was Reds pitching against everyone:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;ERA&lt;/th&gt;
-&lt;th&gt;BA&lt;/th&gt;
-&lt;th&gt;HR&lt;/th&gt;
-&lt;th&gt;K/BB&lt;/th&gt;
-&lt;th&gt;sOPS+&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;4.91&lt;/td&gt;
-&lt;td&gt;.263&lt;/td&gt;
-&lt;td&gt;258&lt;/td&gt;
-&lt;td&gt;1.95&lt;/td&gt;
-&lt;td&gt;116&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;This was Reds Pitching against the Cubs:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;ERA&lt;/th&gt;
-&lt;th&gt;BA&lt;/th&gt;
-&lt;th&gt;HR&lt;/th&gt;
-&lt;th&gt;K/BB&lt;/th&gt;
-&lt;th&gt;tOPS+&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;6.99&lt;/td&gt;
-&lt;td&gt;.285&lt;/td&gt;
-&lt;td&gt;42&lt;/td&gt;
-&lt;td&gt;1.39&lt;/td&gt;
-&lt;td&gt;125&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So the Reds were worse against the Cubs than against the league as a whole.&lt;/p&gt;
-
-&lt;p&gt;The advanced batted ball data backs up Bryant&amp;rsquo;s Reds dominance:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Reds?&lt;/th&gt;
-&lt;th&gt;Angle&lt;/th&gt;
-&lt;th&gt;Velocity&lt;/th&gt;
-&lt;th&gt;Distance&lt;/th&gt;
-&lt;th&gt;Barrel %&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;19.5&lt;/td&gt;
-&lt;td&gt;89.6&lt;/td&gt;
-&lt;td&gt;235.1&lt;/td&gt;
-&lt;td&gt;16.4%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;21.9&lt;/td&gt;
-&lt;td&gt;91.3&lt;/td&gt;
-&lt;td&gt;250.1&lt;/td&gt;
-&lt;td&gt;22.9%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Against the Reds, Bryant&amp;rsquo;s batted ball profile had a more optimal launch angle and greater velocity, distance, and barrel frequency.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;The code for this analysis is located here.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Much of the data for this post was collected from Baseball Reference.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;http://m.mlb.com/glossary/statcast/barreled-ball&#34;&gt;http://m.mlb.com/glossary/statcast/barreled-ball&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;https://gist.github.com/benfb/d4c85ba9aac3ad8d5e0c3304eb2d696a&#34;&gt;https://gist.github.com/benfb/d4c85ba9aac3ad8d5e0c3304eb2d696a&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>Kris Bryant was very good last year. The Reds were&amp;hellip;not great last year. In fact, the Reds&amp;rsquo; bullpen was historically bad. Early in the season they set a record for consecutive games allowing at least one run, and later in the season they set a record for home runs allowed.
+Kris Bryant, of course, was the National League MVP.
+This is what the MVP did against normal pitching in 699 plate appearances:</description>
     </item>
     
     <item>
@@ -178,36 +37,7 @@
       <pubDate>Tue, 28 Mar 2017 23:15:00 -0400</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/03/starters-through-innings/</guid>
-      <description>&lt;p&gt;In an attempt to sharpen my data visualization skills, I decided to look at some of the top starters from the 2016 season by inning. The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season. One thing to keep in mind with all of these is that as the game goes on the sample size decreases. Starters rarely made it through the ninth inning this season, so later game results should be taken with a grain of salt. This type of analysis is best for getting a broad idea of a pitcher.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;The x-axis for each of these graphs is innings. The y-axis varies based on the metric being measured.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Velocity&lt;/strong&gt;
-&lt;img src=&#34;https://baseball.benbailey.me/images/starters/velo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Every pitcher except Scherzer and Verlander (both past Tigers, coincidentally) featured 2-3 pitches that had very similar velocity at the top of the charts. All the pitchers featured a curveball of some sort that averaged below 80 mph except Kluber whose averaged 84+ mph.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Spin&lt;/strong&gt;
-&lt;img src=&#34;https://baseball.benbailey.me/images/starters/spin.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Kyle Hendricks&amp;rsquo; spin rate varies wildly from inning to inning. His pitches are grouped closer together, which plays into his strategy of deceiving hitters with consistency until it&amp;rsquo;s too late. Hendricks also has one of the lower average spin rates, with only Kluber&amp;rsquo;s chart having the same axis. In contrast, David Price throws three pitches that all had an average spin rate of over 2000 throughout the entire game. Max Scherzer&amp;rsquo;s slider, on the other hand, spun around 1/4th as much on average.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Break&lt;/strong&gt;
-&lt;img src=&#34;https://baseball.benbailey.me/images/starters/break.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Curveballs tend to have the greatest average break, followed by changeups, sliders, and sinkers, with cutters and two- and four-seam fastballs at the bottom. Curveball break tends to go down in the ninth inning. Even Rick Porcello&amp;rsquo;s break takes a very slight downturn then, despite it having the highest break by far.&lt;/p&gt;
-
-&lt;p&gt;In terms of more general observations, check out Johnny Cueto&amp;rsquo;s remarkably inconsistent curveball. The pitch varies the most in all three metrics inning-to-inning, and he didn&amp;rsquo;t throw it past the seventh inning. Of course, he only threw it 11 times all season, and only twice in a day once. He never threw it with a runner on base, and preferred to throw it with nobody out. The pitch had pretty good results: five balls, three called strikes, one swinging strike, a groundout and a popout.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;The code for this analysis is &lt;a href=&#34;https://gist.github.com/benfb/bc3ce96cdd00bb011f06aa34e183b4d9&#34;&gt;here&lt;/a&gt;.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>In an attempt to sharpen my data visualization skills, I decided to look at some of the top starters from the 2016 season by inning. The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season. One thing to keep in mind with all of these is that as the game goes on the sample size decreases. Starters rarely made it through the ninth inning this season, so later game results should be taken with a grain of salt.</description>
     </item>
     
     <item>
@@ -216,342 +46,9 @@
       <pubDate>Thu, 16 Mar 2017 11:48:35 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This post was featured on the Fangraphs community blog &lt;a href=&#34;http://www.fangraphs.com/community/carl-edwards-had-a-bad-day-in-a-great-year/&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I played around with the &lt;a href=&#34;http://billpetti.github.io/baseballr&#34;&gt;&lt;code&gt;baseballr&lt;/code&gt;&lt;/a&gt; package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been particularly intrigued recently by &lt;a href=&#34;http://www.baseball-reference.com/players/e/edwarca01.shtml&#34;&gt;Carl Edwards Jr.&lt;/a&gt;, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&amp;rsquo;t aware quite how good he was until I calculated &lt;a href=&#34;http://www.fangraphs.com/library/offense/woba/&#34;&gt;wOBA&lt;/a&gt; allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&amp;rsquo;s top closers and the game&amp;rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;IP&lt;/th&gt;
-&lt;th&gt;ERA&lt;/th&gt;
-&lt;th&gt;WHIP&lt;/th&gt;
-&lt;th&gt;BABIP&lt;/th&gt;
-&lt;th&gt;FIP&lt;/th&gt;
-&lt;th&gt;wOBA&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Zach Britton&lt;/td&gt;
-&lt;td&gt;67.0&lt;/td&gt;
-&lt;td&gt;0.54&lt;/td&gt;
-&lt;td&gt;0.836&lt;/td&gt;
-&lt;td&gt;0.231&lt;/td&gt;
-&lt;td&gt;1.80&lt;/td&gt;
-&lt;td&gt;0.188&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Kenley Jansen&lt;/td&gt;
-&lt;td&gt;68.2&lt;/td&gt;
-&lt;td&gt;1.83&lt;/td&gt;
-&lt;td&gt;0.670&lt;/td&gt;
-&lt;td&gt;0.244&lt;/td&gt;
-&lt;td&gt;1.34&lt;/td&gt;
-&lt;td&gt;0.188&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Carl Edwards&lt;/td&gt;
-&lt;td&gt;36.0&lt;/td&gt;
-&lt;td&gt;3.75&lt;/td&gt;
-&lt;td&gt;0.806&lt;/td&gt;
-&lt;td&gt;0.162&lt;/td&gt;
-&lt;td&gt;2.79&lt;/td&gt;
-&lt;td&gt;0.201&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Clayton Kershaw&lt;/td&gt;
-&lt;td&gt;149.2&lt;/td&gt;
-&lt;td&gt;1.68&lt;/td&gt;
-&lt;td&gt;0.722&lt;/td&gt;
-&lt;td&gt;0.256&lt;/td&gt;
-&lt;td&gt;1.78&lt;/td&gt;
-&lt;td&gt;0.202&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Aroldis Chapman&lt;/td&gt;
-&lt;td&gt;58.0&lt;/td&gt;
-&lt;td&gt;1.55&lt;/td&gt;
-&lt;td&gt;0.862&lt;/td&gt;
-&lt;td&gt;0.268&lt;/td&gt;
-&lt;td&gt;1.42&lt;/td&gt;
-&lt;td&gt;0.206&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Andrew Miller&lt;/td&gt;
-&lt;td&gt;74.1&lt;/td&gt;
-&lt;td&gt;1.45&lt;/td&gt;
-&lt;td&gt;0.686&lt;/td&gt;
-&lt;td&gt;0.258&lt;/td&gt;
-&lt;td&gt;1.68&lt;/td&gt;
-&lt;td&gt;0.209&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Edwards stands out negatively in several respects here. He pitched the least innings out of that group by far, and was almost certainly put in the least stressful situations. His ERA is almost two points higher than the next highest&amp;rsquo;s, and his FIP is nearly a point higher than Britton&amp;rsquo;s, the second highest mark. His BABIP is also remarkably low, due in part to luck and in part to the Cubs&amp;rsquo; historically good defense. So why is his wOBA so remarkable?&lt;/p&gt;
-
-&lt;p&gt;Looking through Edwards&amp;rsquo; &lt;a href=&#34;http://www.baseball-reference.com/players/gl.fcgi?id=edwarca01&amp;amp;t=p&amp;amp;year=2016&#34;&gt;game log&lt;/a&gt;, two bad appearances stand out:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;August 13th, where he allowed five runs on one hit and four walks while recording just two outs.&lt;/li&gt;
-&lt;li&gt;September 17th, where he allowed three runs on three hits (two of them home runs) in an inning&amp;rsquo;s work.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If we remove the August 13th outing, Edwards&amp;rsquo; ERA drops to &lt;code&gt;2.55&lt;/code&gt;, almost an entire point. If we remove the September 17th outing as well, it drops to &lt;code&gt;1.83&lt;/code&gt;. Removing the first performance, his FIP drops to &lt;code&gt;2.56&lt;/code&gt;. Removing the other brings it down to &lt;code&gt;1.96&lt;/code&gt;, which is still higher than the other five pitchers (possibly due to his BABIP) but much closer. Bad pitching performances are part of a pitcher&amp;rsquo;s year, and shouldn&amp;rsquo;t be entirely disregarded. However, it seems likely that &lt;em&gt;something&lt;/em&gt; was off (mechanically, physically, or mentally) on August 13th.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ll get back to these games later.&lt;/p&gt;
-
-&lt;p&gt;As the Cubs consistently carried three catchers last season, I thought it would be interesting to compare Edwards&amp;rsquo; performance across all three:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;cej_by_catcher &amp;lt;- cej %&amp;gt;%
-  group_by(pitch_type, catcher) %&amp;gt;%
-  summarize(n = n(),
-            avg_mph = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.numeric&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.character&lt;/span&gt;(start_speed)), na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_spin = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.numeric&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;as.character&lt;/span&gt;(spin_rate)), na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_hit_distance = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_distance_sc, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_hit_speed = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_speed, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_hit_angle = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(hit_angle, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_barrel = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(barrel, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;),
-            avg_ext = &lt;span style=&#34;color: #0000aa&#34;&gt;mean&lt;/span&gt;(release_extension, na.rm = &lt;span style=&#34;color: #0000aa&#34;&gt;TRUE&lt;/span&gt;)) %&amp;gt;%
-  mutate(pitch_pct = n/&lt;span style=&#34;color: #0000aa&#34;&gt;sum&lt;/span&gt;(n)) %&amp;gt;%
-  filter(pitch_type != &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;CH&amp;quot;&lt;/span&gt;, pitch_type != &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;IN&amp;quot;&lt;/span&gt;) &lt;span style=&#34;color: #aaaaaa; font-style: italic&#34;&gt;# These each occur once and may be mistakes&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code&gt;baseballr&lt;/code&gt; package also allows us to look at Statcast data from Baseball Savant:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;cej &amp;lt;- scrape_statcast_savant_pitcher(start_date = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-04-06&amp;quot;&lt;/span&gt;, end_date = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-10-15&amp;quot;&lt;/span&gt;, pitcherid = &lt;span style=&#34;color: #009999&#34;&gt;605218&lt;/span&gt;)
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;type&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;catcher&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;count&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;mph&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;hit_dist&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;hit_spd&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;pct&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Ross&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;27&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;81.16&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;119&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;73.6&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;16.67%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Montero&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;53&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;81.54&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;258.8&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;94.86&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;32.72%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Federowicz&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;81.25&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;NA&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1.85%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;CU&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Contreras&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;79&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;81.02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;208.8&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;87.74&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;48.77%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Ross&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;99&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95.72&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;186.8&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;84.31&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;21.57%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Montero&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;147&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95.44&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;211.1&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;83.77&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;32.03%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Federowicz&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95.77&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;183&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95.5&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1.96%&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;FF&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Contreras&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;204&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95.44&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;199.4&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;85.94&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;44.44%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;From the table, we can see that Edwards throws two main pitches—a four-seam fastball and a curveball. He pitched most often to Willson Contreras, then Miguel Montero, then David Ross (and once to Tim Federowicz). Edwards threw his fastball a notch faster to Ross than other catchers, which could be due to the small sample size. He also threw his fastball more to Ross than other catchers: despite throwing 16.67% of his curveballs to Ross, he threw 21.57% of his fastballs to him. There are several reasons this might be the case:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Edwards focused on his fastball earlier in the season before gaining more confidence in his curve.&lt;/li&gt;
-&lt;li&gt;Ross saw that Edwards&amp;rsquo; fastball was producing better results and called it more often.&lt;/li&gt;
-&lt;li&gt;Contreras was more confident in his agility and therefore ability to block a curveball than Ross was.&lt;/li&gt;
-&lt;li&gt;Random sampling and a small sample size.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Let&amp;rsquo;s take a look at the results these pitches got. By plotting hit velocity and hit distance, we can compare results across catchers:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cevd1.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When Ross was catching, Edwards tended to generate softer contact that went shorter distances. We can use the Statcast data to see why that is.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cesv1.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This chart, plotting spin against pitch velocity, shows something interesting: Edwards&amp;rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&amp;rsquo; style, and that was maximized when Ross was catching. Of course, this isn&amp;rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&amp;rsquo; numbers if we take away the two worst games in Edwards&amp;rsquo; season.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cevd2.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Already we see that removing the two bad outings brings Contreras much closer to Ross and  Montero in terms of average hit speed and hit distance. Now we can look at how removing the bad outing affects velocity and spin.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://baseball.benbailey.me/images/cesv2.png&#34; alt=&#34;blah&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There isn&amp;rsquo;t any effect on the spin of Edwards&amp;rsquo; curveball while Contreras is catching, but the spin on his fastball gets much closer to Ross than Montero. Let&amp;rsquo;s compare Edwards&amp;rsquo; Statcast data between the August 13th outing and his overall averages (the bolded rows are from the 13th):&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;MPH&lt;/th&gt;
-&lt;th&gt;Spin&lt;/th&gt;
-&lt;th&gt;Ext&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;FF&lt;/td&gt;
-&lt;td&gt;95.55&lt;/td&gt;
-&lt;td&gt;1876&lt;/td&gt;
-&lt;td&gt;6.85&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;FF&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;94.60&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;1602&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;6.73&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CU&lt;/td&gt;
-&lt;td&gt;81.20&lt;/td&gt;
-&lt;td&gt;1605&lt;/td&gt;
-&lt;td&gt;6.31&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;CU&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;81.49&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;1480&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;6.19&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;If we add in the other poor outing:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;MPH&lt;/th&gt;
-&lt;th&gt;Spin&lt;/th&gt;
-&lt;th&gt;Ext&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;FF&lt;/td&gt;
-&lt;td&gt;95.54&lt;/td&gt;
-&lt;td&gt;1873&lt;/td&gt;
-&lt;td&gt;6.85&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;FF&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;95.08&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;1749&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;6.74&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;CU&lt;/td&gt;
-&lt;td&gt;81.23&lt;/td&gt;
-&lt;td&gt;1610&lt;/td&gt;
-&lt;td&gt;6.31&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;CU&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;81.12&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;1502&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;6.26&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Adding in the second bad outing makes the numbers more similar, lending credence to the idea that the first outing was an outlier. On August 13th the spin on his fastball, his extension, and his velocity were all down a tick.&lt;/p&gt;
-
-&lt;p&gt;Carl Edwards had a quietly great year out of the bullpen for the Cubs. He was among the league leaders in wOBA-against, which is initially surprising based on his peripheral numbers. Upon removing an outing where the spin rate and velocity on his signature pitch took a steep downturn, Edwards&amp;rsquo; peripheral numbers match up more closely with the type of performance you&amp;rsquo;d expect from someone in that elite group of pitchers. Carl Edwards had a bad day—here&amp;rsquo;s to more good ones.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;As part of this analysis, I defined a function &lt;code&gt;playername_lookup&lt;/code&gt; that gets a player&amp;rsquo;s name from their MLBAM id (this function is based on the &lt;code&gt;playerid_lookup&lt;/code&gt; function from the &lt;code&gt;baseballr&lt;/code&gt; package). It is provided &lt;a href=&#34;https://gist.github.com/benfb/c2be996bcdbf0b1fa9f7f544fceb2934&#34;&gt;here&lt;/a&gt; for reference.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/&#34;&gt;http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>This post was featured on the Fangraphs community blog here
+This week I played around with the baseballr package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R1.
+I&amp;rsquo;ve been particularly intrigued recently by Carl Edwards Jr., a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&amp;rsquo;t aware quite how good he was until I calculated wOBA allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller.</description>
     </item>
     
     <item>
@@ -560,34 +57,8 @@
       <pubDate>Fri, 03 Mar 2017 12:46:26 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/</guid>
-      <description>&lt;p&gt;This week I focused on improving the usability of the Shiny app. I used Shiny&amp;rsquo;s
-&lt;code&gt;renderUI&lt;/code&gt; function to dynamically generate the options for the game select
-dropdown. I also set up a baseball API &lt;a href=&#34;http://bbbaseball.herokuapp.com&#34;&gt;here&lt;/a&gt;, and added another API
-endpoint to get the list of games that happened on any given day.&lt;/p&gt;
-
-&lt;p&gt;One of the nicer things I added to the Shiny app was the use of the &lt;code&gt;tryCatch&lt;/code&gt;
-function to hide confusing error messages from the user, like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;tryCatch&lt;/span&gt;({
-     splitGames &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;unlist&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;strsplit&lt;/span&gt;(input$game, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot; @ &amp;quot;&lt;/span&gt;))
-     away &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
-     home &amp;lt;- teams[&lt;span style=&#34;color: #0000aa&#34;&gt;which&lt;/span&gt;(&lt;span style=&#34;color: #0000aa&#34;&gt;grepl&lt;/span&gt;(splitGames[&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color: #0000aa&#34;&gt;names&lt;/span&gt;(teams)))]
-
-     data &amp;lt;- getEvents(year, month, day, away, home)
-     sliderInput(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;event&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Event:&amp;quot;&lt;/span&gt;,
-                 min = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, max = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities),
-                 value = &lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(data$probabilities), sep = &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)
-   }, error = &lt;span style=&#34;color: #0000aa&#34;&gt;function&lt;/span&gt;(e) {
-     &lt;span style=&#34;color: #0000aa&#34;&gt;stop&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;That is not a valid event&amp;quot;&lt;/span&gt;)
-   })
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In reality, much of my week was spent fighting with R&amp;rsquo;s several methods of
-dealing with strings and arrays. Most of the changes this week were in the front
-end user-facing part of the app, so I&amp;rsquo;m excited to work more on the backend next
-week (maybe finally improving the win probability calculation?). As a side note,
-the app does generally work for spring training games (as long as Gameday is
-working at the moment).&lt;/p&gt;
-</description>
+      <description>This week I focused on improving the usability of the Shiny app. I used Shiny&amp;rsquo;s renderUI function to dynamically generate the options for the game select dropdown. I also set up a baseball API here, and added another API endpoint to get the list of games that happened on any given day.
+One of the nicer things I added to the Shiny app was the use of the tryCatch function to hide confusing error messages from the user, like this:</description>
     </item>
     
     <item>
@@ -596,22 +67,7 @@ working at the moment).&lt;/p&gt;
       <pubDate>Wed, 22 Feb 2017 18:45:40 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/02/an-app/</guid>
-      <description>&lt;p&gt;This week I made a Shiny interface to the win probability and description services.
-It can be viewed &lt;a href=&#34;https://benfb.shinyapps.io/bbbaseball&#34;&gt;here&lt;/a&gt;. To do this, I had to set up hosting for
-both Shiny and my Elixir backend service. I also switched from embedding/posting
-the plots on Plotly to embedding them in the new Shiny application, which should
-help reduce costs. Learning more about Shiny made implementing the interface
-relatively simple. The generation of the graphs is now abstracted into a
-function that grabs JSON data from the API server I set up, which makes it much
-easier to generate graphs for any desired game.&lt;/p&gt;
-
-&lt;p&gt;I would like to make several improvements to the graph next week. Including
-scores would be helpful. Perhaps most interesting would be implementing
-automatic &amp;ldquo;swing-point&amp;rdquo; detection and adding concise labels for the greatest
-win probability changes in a game. Finally, it would be nice if there were a
-way to view which teams played on which days, as right now it&amp;rsquo;s difficult to
-find a game that you want to graph.&lt;/p&gt;
-</description>
+      <description>This week I made a Shiny interface to the win probability and description services. It can be viewed here. To do this, I had to set up hosting for both Shiny and my Elixir backend service. I also switched from embedding/posting the plots on Plotly to embedding them in the new Shiny application, which should help reduce costs. Learning more about Shiny made implementing the interface relatively simple. The generation of the graphs is now abstracted into a function that grabs JSON data from the API server I set up, which makes it much easier to generate graphs for any desired game.</description>
     </item>
     
     <item>
@@ -620,104 +76,8 @@ find a game that you want to graph.&lt;/p&gt;
       <pubDate>Wed, 08 Feb 2017 18:38:53 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/</guid>
-      <description>&lt;p&gt;This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
-Using the &lt;code&gt;baseball&lt;/code&gt; umbrella application combined with R and Plotly, I generated a win expectancy
-graph for a random game.&lt;/p&gt;
-
-&lt;p&gt;In any given situation, the win expectancy is equivalent to the percentage of games
-that teams in that exact situation went on to win. To calculate the win probability of
-a situation, the application converts the situation into a hash using the number of outs,
-inning, number and position of base runners, and the current score, then looks it up in a
-table of historical win probabilities. This table was calculated using &lt;a href=&#34;https://gregstoll.dyndns.org/~gregstoll/baseball/stats.html&#34;&gt;Greg Stoll&amp;rsquo;s scripts&lt;/a&gt;
-and &lt;a href=&#34;http://www.retrosheet.org&#34;&gt;Retrosheet&lt;/a&gt; data. The code for the win expectancy service can be found
-&lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_win_ex&#34;&gt;here&lt;/a&gt;, and the general downloader&amp;rsquo;s source is &lt;a href=&#34;https://github.com/benfb/baseball/tree/master/apps/baseball_slurper&#34;&gt;here&lt;/a&gt;. What follows
-is an example of a manually-generated win expectancy graph of the game that occurred
-on May 10th of last season between the Padres and the Cubs.&lt;/p&gt;
-
-&lt;p&gt;First, we utilize the two functions &lt;code&gt;probabilities_from_game/2&lt;/code&gt; and &lt;code&gt;descriptions_from_game/2&lt;/code&gt;
-to get vectors of win expectancies and descriptions of every event that occurred in the game:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;iex(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.probabilities_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
-[[&lt;span style=&#34;color: #009999&#34;&gt;0.5652355266525733&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5826495329514373&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.593064127007075&lt;/span&gt;],
- [&lt;span style=&#34;color: #009999&#34;&gt;0.5669081828973761&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5470361185179661&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.534091190836288&lt;/span&gt;],
- [&lt;span style=&#34;color: #009999&#34;&gt;0.5569277494191046&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5742743999613658&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;0.5803200220916497&lt;/span&gt;],...]
-
-iex(&lt;span style=&#34;color: #009999&#34;&gt;2&lt;/span&gt;)&amp;gt; &lt;span style=&#34;color: #00aa00; text-decoration: underline&#34;&gt;BaseballSlurper.Server&lt;/span&gt;.descriptions_from_game(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;2016-05-10&amp;quot;&lt;/span&gt;, [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;sdn&amp;quot;&lt;/span&gt;, &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;chn&amp;quot;&lt;/span&gt;])
-[[&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Wil Myers flies out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Matt Kemp lines out to center fielder Dexter Fowler.&amp;quot;&lt;/span&gt;],
- [&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Dexter Fowler strikes out swinging.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Jason Heyward lines out to center fielder Jon Jay.&amp;quot;&lt;/span&gt;,
-  &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;Kris Bryant lines out to right fielder Matt Kemp.&amp;quot;&lt;/span&gt;],...]
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000aa&#34;&gt;library&lt;/span&gt;(plotly)
-&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_username&amp;quot;&lt;/span&gt; = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;benfb&amp;quot;&lt;/span&gt;)
-&lt;span style=&#34;color: #0000aa&#34;&gt;Sys.setenv&lt;/span&gt;(&lt;span style=&#34;color: #aa5500&#34;&gt;&amp;quot;plotly_api_key&amp;quot;&lt;/span&gt; = API_KEY)
-probabilities &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(PROBABILITY_VECTOR)
-x &amp;lt;- &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y)
-event &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;c&lt;/span&gt;(DESCRIPTION_VECTOR)
-data &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;data.frame&lt;/span&gt;(x, y, event)
-
-kb &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
-  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
-  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
-  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;23&lt;/span&gt;],
-  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
-  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
-  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;K Bryant Double&amp;#39;&lt;/span&gt;,
-  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
-              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
-              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
-  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
-
-ad &amp;lt;- &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(
-  xref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;paper&amp;#39;&lt;/span&gt;,
-  yref = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color: #009999&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;, by=(&lt;span style=&#34;color: #009999&#34;&gt;1&lt;/span&gt;/&lt;span style=&#34;color: #0000aa&#34;&gt;length&lt;/span&gt;(x)))[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
-  y = probabilities[&lt;span style=&#34;color: #009999&#34;&gt;72&lt;/span&gt;],
-  xanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;,
-  yanchor = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;middle&amp;#39;&lt;/span&gt;,
-  text = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;A Dickerson Home Run&amp;#39;&lt;/span&gt;,
-  font = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(family = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Arial&amp;#39;&lt;/span&gt;,
-              size = &lt;span style=&#34;color: #009999&#34;&gt;16&lt;/span&gt;,
-              color = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;rgba(67,67,67,1)&amp;#39;&lt;/span&gt;),
-  showarrow = &lt;span style=&#34;color: #0000aa&#34;&gt;FALSE&lt;/span&gt;)
-
-p &amp;lt;- plot_ly(
-  data,
-  x = &lt;span style=&#34;color: #0000aa&#34;&gt;seq_along&lt;/span&gt;(y),
-  y = probabilities,
-  type = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;scatter&amp;#39;&lt;/span&gt;,
-  mode = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;lines&amp;#39;&lt;/span&gt;,
-  text = event) %&amp;gt;%
-layout(
-  title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;SDN @ CHN 2016-05-10&amp;#39;&lt;/span&gt;,
-  xaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Game Event&amp;#39;&lt;/span&gt;),
-  yaxis = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(title = &lt;span style=&#34;color: #aa5500&#34;&gt;&amp;#39;Home Team Win Probability&amp;#39;&lt;/span&gt;)) %&amp;gt;%
-layout(annotations = &lt;span style=&#34;color: #00aaaa&#34;&gt;list&lt;/span&gt;(kb, ad))
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This R code yields the following chart:&lt;/p&gt;
-
-&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~benfb/0.embed&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;For comparison, the Fangraph&amp;rsquo;s win expectancy graph is &lt;a href=&#34;http://www.fangraphs.com/wins.aspx?date=2016-05-10&amp;amp;team=Cubs&amp;amp;dh=0&amp;amp;season=2016&#34;&gt;here&lt;/a&gt;, and you can find
-the full video of the game on &lt;a href=&#34;https://www.youtube.com/watch?v=wGqoB_8hNtw&#34;&gt;MLB&amp;rsquo;s YouTube channel&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;The next step will be to automate this process and look into self-hosting
-the graphs instead of going through Plotly&amp;rsquo;s rate-limited API.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;The date in the title of this video is actually incorrect. It&amp;rsquo;s actually the game from May 10th.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats. Using the baseball umbrella application combined with R and Plotly, I generated a win expectancy graph for a random game.
+In any given situation, the win expectancy is equivalent to the percentage of games that teams in that exact situation went on to win. To calculate the win probability of a situation, the application converts the situation into a hash using the number of outs, inning, number and position of base runners, and the current score, then looks it up in a table of historical win probabilities.</description>
     </item>
     
   </channel>

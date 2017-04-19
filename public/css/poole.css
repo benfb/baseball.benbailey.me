@@ -328,7 +328,7 @@ tbody tr:nth-child(odd) th {
 
 /* Post body */
 .post>p {
-  font-family: "Cardo", "Georgia", "Times New Roman", serif;
+  font-family: "Open Sans", "Georgia", "Times New Roman", sans-serif;
 }
 
 /* Related posts */
