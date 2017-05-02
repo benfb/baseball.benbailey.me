@@ -38,6 +38,12 @@ The only pitcher with a slider that has averaged above 90 MPH in effective speed
 
 Arrieta [throws a mix of a cutter and slider][arrietagrips]. When he was traded to the Cubs from the Orioles in July 2013, his month to month slider usage began increasing almost immediately. In 2014, his first full season with the Cubs, he threw the pitch 29% of the time. In 2015, he threw it 29.5% of the time. However, his usage has decreased since then, and now sits at 16.1% so far this year (potentially due to his [lost command][arrietacommand] of it). He threw his slider more than 20% of the time for about two years, and then decreased his usage again. It's not too surprising that his arm has held up, especially considering his conditioning.
 
+<div>
+    <a href="https://plot.ly/~benfb/49/?share_key=G6xk7JSpfCeXOwHf7zbFin" target="blank" title="Plot 49" style="display: block; text-align: center;"><img src="https://plot.ly/~benfb/49.png?share_key=G6xk7JSpfCeXOwHf7zbFin" alt="Plot 49" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="benfb:49" sharekey-plotly="G6xk7JSpfCeXOwHf7zbFin" src="https://plot.ly/embed.js" async></script>
+</div>
+
+
 DeGrom got Tommy John surgery at 22, Harvey 24, Wheeler 25, and Matz 19. Syndergaard is 24 now. Out of the two who had Tommy John in the Majors, Harvey pitched for 1.5 years at the Major League level before needing surgery and Wheeler had about the same amount of time as well. Syndergaard has been pitching for about half a year longer than either of them, but it's concerning how much the timelines line up. Syndergaard is just a little past the mean age of Tommy John surgery in the last 10 years (23.28).
 
 Jon Gray is an interesting case due to his frequent comparisons to Syndergaard. His arm seems healthy now, but he's also only pitched for a year and a half so far. I wouldn't be surprised if he ends up in the same position as Syndergaard soon, though, especially since it appears that [he's started throwing the slider even harder][jongraythinks] in limited starts this season.
