@@ -12,17 +12,28 @@
     
     
     <item>
+      <title>Resources</title>
+      <link>https://baseball.benbailey.me/resources/</link>
+      <pubDate>Tue, 21 Feb 2017 18:54:36 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/resources/</guid>
+      <description>Some resources used for the posts on this site:
+ Fangraphs: Analytical articles and statistical database Baseball-Reference: Very thorough statistical database Baseball Savant: Statcast/advanced metrics search and leaderboards Brooks Baseball: PitchFX analysis and granular data  From a technical side:
+ Plot.ly Hugo RStudio BaseballR package  </description>
+    </item>
+    
+    <item>
       <title>Schedule</title>
       <link>https://baseball.benbailey.me/schedule/</link>
       <pubDate>Tue, 21 Feb 2017 18:54:36 -0500</pubDate>
       
       <guid>https://baseball.benbailey.me/schedule/</guid>
-      <description> 2017-02-14
+      <description>2017-02-14
  Set up blog Look into win probability calculation Make a nice probability graph  2017-02-21
  Create Shiny app Move graphs to Shiny Automate creation of graphs Set up hosting  2017-03-03
  Improve Shiny UI Improve Shiny UX Add API endpoints to support the above improvements  2017-03-22
  Research win probability modeling Play around with baseballr package Practice more specific analysis  2017-03-29
- Modeling pitcher performance by inning Combining ggplot plots   </description>
+ Modeling pitcher performance by inning Combining ggplot plots  2017-04-19</description>
     </item>
     
   </channel>

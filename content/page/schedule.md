@@ -31,9 +31,25 @@ date = "2017-02-21T18:54:36-05:00"
   * Modeling pitcher performance by inning
   * Combining ggplot plots
 
+6. [2017-04-19][6]
+  * Seeing exactly how good Kris Bryant was against the Reds
+
+7. [2017-04-19][7]
+  * Finding starters with the worst two-out performance
+
+8. [2017-04-26][8]
+  * Examining pitchers with top spin rates
+
+9. [2017-05-03][9]
+  * Looking at Mets and Tommy John
+
 
 [1]: https://baseball.benbailey.me/2017/02/descriptions-and-probabilities/
 [2]: https://baseball.benbailey.me/2017/02/an-app/
 [3]: https://baseball.benbailey.me/2017/03/events-and-dynamic-ui/
 [4]: https://baseball.benbailey.me/2017/03/carl-edwards-jr-bad-day-great-year/
 [5]: https://baseball.benbailey.me/2017/03/starters-through-innings/
+[6]: https://baseball.benbailey.me/2017/04/kris-bryant-reds/
+[7]: https://baseball.benbailey.me/2017/04/starters-cant-finish/
+[8]: https://baseball.benbailey.me/2017/04/spin-room/
+[9]: https://baseball.benbailey.me/2017/05/syndergaard-next-year/
