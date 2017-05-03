@@ -31,7 +31,7 @@ date = "2017-02-21T18:54:36-05:00"
   * Modeling pitcher performance by inning
   * Combining ggplot plots
 
-6. [2017-04-19][6]
+6. [2017-04-05][6]
   * Seeing exactly how good Kris Bryant was against the Reds
 
 7. [2017-04-19][7]
