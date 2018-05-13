@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.21-DEV" />
+  <meta name="generator" content="Hugo 0.40.2" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -46,7 +46,7 @@
       
     </ul>
 
-    <p>&copy; 2017. All rights reserved. </p>
+    <p>&copy; 2018. All rights reserved. </p>
   </div>
 </div>
 
@@ -57,7 +57,7 @@
 			  <span class="post-date">Thu, Mar 16, 2017</span>
 			      <p><em>This post was featured on the Fangraphs community blog <a href="http://www.fangraphs.com/community/carl-edwards-had-a-bad-day-in-a-great-year/">here</a></em></p>
 
-<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
 <p>I&rsquo;ve been particularly intrigued recently by <a href="http://www.baseball-reference.com/players/e/edwarca01.shtml">Carl Edwards Jr.</a>, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&rsquo;t aware quite how good he was until I calculated <a href="http://www.fangraphs.com/library/offense/woba/">wOBA</a> allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&rsquo;s top closers and the game&rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:</p>
 
@@ -151,24 +151,20 @@
 <p>We&rsquo;ll get back to these games later.</p>
 
 <p>As the Cubs consistently carried three catchers last season, I thought it would be interesting to compare Edwards&rsquo; performance across all three:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>cej_by_catcher &lt;- cej %&gt;%
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej_by_catcher &lt;- cej %&gt;%
   group_by(pitch_type, catcher) %&gt;%
   summarize(n = n(),
-            avg_mph = <span style="color: #0000aa">mean</span>(<span style="color: #0000aa">as.numeric</span>(<span style="color: #0000aa">as.character</span>(start_speed)), na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_spin = <span style="color: #0000aa">mean</span>(<span style="color: #0000aa">as.numeric</span>(<span style="color: #0000aa">as.character</span>(spin_rate)), na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_distance = <span style="color: #0000aa">mean</span>(hit_distance_sc, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_speed = <span style="color: #0000aa">mean</span>(hit_speed, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_angle = <span style="color: #0000aa">mean</span>(hit_angle, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_barrel = <span style="color: #0000aa">mean</span>(barrel, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_ext = <span style="color: #0000aa">mean</span>(release_extension, na.rm = <span style="color: #0000aa">TRUE</span>)) %&gt;%
-  mutate(pitch_pct = n/<span style="color: #0000aa">sum</span>(n)) %&gt;%
-  filter(pitch_type != <span style="color: #aa5500">&quot;CH&quot;</span>, pitch_type != <span style="color: #aa5500">&quot;IN&quot;</span>) <span style="color: #aaaaaa; font-style: italic"># These each occur once and may be mistakes</span>
-</pre></div>
-
+            avg_mph = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(start_speed)), na.rm = <span style="color:#00a">TRUE</span>),
+            avg_spin = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(spin_rate)), na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_distance = <span style="color:#00a">mean</span>(hit_distance_sc, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_speed = <span style="color:#00a">mean</span>(hit_speed, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_angle = <span style="color:#00a">mean</span>(hit_angle, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_barrel = <span style="color:#00a">mean</span>(barrel, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_ext = <span style="color:#00a">mean</span>(release_extension, na.rm = <span style="color:#00a">TRUE</span>)) %&gt;%
+  mutate(pitch_pct = n/<span style="color:#00a">sum</span>(n)) %&gt;%
+  filter(pitch_type != <span style="color:#a50">&#34;CH&#34;</span>, pitch_type != <span style="color:#a50">&#34;IN&#34;</span>) <span style="color:#aaa;font-style:italic"># These each occur once and may be mistakes</span></code></pre></div>
 <p>The <code>baseballr</code> package also allows us to look at Statcast data from Baseball Savant:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>cej &lt;- scrape_statcast_savant_pitcher(start_date = <span style="color: #aa5500">&quot;2016-04-06&quot;</span>, end_date = <span style="color: #aa5500">&quot;2016-10-15&quot;</span>, pitcherid = <span style="color: #009999">605218</span>)
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej &lt;- scrape_statcast_savant_pitcher(start_date = <span style="color:#a50">&#34;2016-04-06&#34;</span>, end_date = <span style="color:#a50">&#34;2016-10-15&#34;</span>, pitcherid = <span style="color:#099">605218</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -282,7 +278,7 @@
 
 <p><img src="/images/cesv1.png" alt="blah" /></p>
 
-<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
+<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
 
 <p><img src="/images/cevd2.png" alt="blah" /></p>
 

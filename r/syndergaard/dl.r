@@ -1,22 +1,17 @@
-library(baseballr)
-library(Lahman)
 library(dplyr)
 library(ggplot2)
-library(reshape2)
-library(stringr)
-library(tidyr)
 library(plotly)
 library(ggthemes)
 
-dl2016 <- read.csv("~/src/r/2016dldata.csv") %>%
+dl2016 <- read.csv("~/src/baseball-web/r/syndergaard/2016dldata.csv") %>%
   filter(Position == "RHP" | Position == "LHP") %>%
   filter(days >= 30)
 
-dl2015 <- read.csv("~/src/r/2015dldata.csv") %>%
+dl2015 <- read.csv("~/src/baseball-web/r/syndergaard/2015dldata.csv") %>%
   filter(Position == "RHP" | Position == "LHP") %>%
   filter(Days.on.DL >= 30)
 
-tj <- read.csv("~/src/r/tommyjohn.csv")
+tj <- read.csv("~/src/baseball-web/r/syndergaard/tommyjohn.csv")
 
 mlb.tj <- tj %>%
   filter(Level == "MLB") %>%
@@ -24,7 +19,7 @@ mlb.tj <- tj %>%
   filter(Position == "P") %>%
   select(Player, TJ.Surgery.Date, Team, Throws, Age, Surgeon.s., Year)
 
-savant_slider <- read.csv("~/src/r/savant15_17_slider_highmin.csv") %>%
+savant_slider <- read.csv("~/src/baseball-web/r/syndergaard/savant15_17_slider_highmin.csv") %>%
   mutate(tj = player_name %in% tj$Player) %>%
   mutate(speed_diff = effective_speed - velocity) %>%
   mutate(speed_diff_pos = speed_diff >= 0)
@@ -73,7 +68,7 @@ ggplotly(p5)
 
 api_create(p5)
 
-usage <- read.csv("~/src/r/leaderboard.csv")
+usage <- read.csv("~/src/baseball-web/r/syndergaard/leaderboard.csv")
 usage$FB. <- as.numeric(sub("%", "", usage$FB.))/100
 usage$SL. <- as.numeric(sub("%", "", usage$SL.))/100
 usage$CT. <- as.numeric(sub("%", "", usage$CT.))/100
@@ -87,7 +82,7 @@ usage_tj <- usage %>%
 
 summary(aov(tj~FBv,usage_tj))
 
-usage07 <- read.csv("~/src/r/leaderboard_07_17.csv") %>%
+usage07 <- read.csv("~/src/baseball-web/r/syndergaard/leaderboard_07_17.csv") %>%
   mutate(tj = Name %in% tj$Player)
 
 usage07$FB. <- as.numeric(sub("%", "", usage07$FB.))/100

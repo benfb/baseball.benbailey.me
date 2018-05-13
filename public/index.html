@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.21-DEV" />
+  <meta name="generator" content="Hugo 0.40.2" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -47,7 +47,7 @@
       
     </ul>
 
-    <p>&copy; 2017. All rights reserved. </p>
+    <p>&copy; 2018. All rights reserved. </p>
   </div>
 </div>
 
@@ -56,6 +56,716 @@
 <div class="posts">
 
       
+        
+  <div class="post">
+    <h1 class="post-title">
+      <a href="https://baseball.benbailey.me/2018/05/a-bullpen-update/">
+        A 2018 Bullpen Update
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, May 12, 2018</span>
+
+    <p>Bullpens are <a href="https://www.fangraphs.com/blogs/so-you-want-to-have-a-good-bullpen/">notoriously difficult to predict</a>. Baseball is volatile by nature, and relievers even more so. Despite this, many teams invested heavily in relievers over the offseason. Here&rsquo;s what bullpens are doing so far, one quarter through the season.</p>
+
+<p>First, we&rsquo;ll compare how each team&rsquo;s bullpen performed last year with how one would expect them to perform based on batted ball data. If a team lies above the line, then their actual results were not as bad as one would expect, and they were lucky. The farther below the line, the more unlucky a team was. For instance, in 2017, the Tigers&rsquo; bullpen was very bad but also lucky (they should have been worse), while the Dodgers&rsquo; bullpen was not only very good but also unlucky (they should have performed even better).</p>
+
+<p><img src="/images/bullpen_update/luck_2017.png" alt="blah" /></p>
+
+<p>This is the same chart, but with 2018 data instead:</p>
+
+<p><img src="/images/bullpen_update/luck_2018.png" alt="blah" /></p>
+
+<p>The Diamondbacks&rsquo; bullpen has been great, but they&rsquo;ve been a little lucky. As good as the Brewers&rsquo; bullpen has been (led by Josh Hader), one would expect them to be even better. As we would expect, one can see on these two graphs that wOBA and xwOBA are strongly correlated.</p>
+
+<p>First, we&rsquo;ll start with actual results. The Diamondbacks&rsquo; bullpen is the most improved by wOBA allowed, improving by nearly 0.05 points, while the Indians&rsquo; bullpen is worse by a large margin, allowing a wOBA 0.06 points higher than in 2017 so far. In terms of actual results, the Rockies&rsquo; bullpen has been exactly the same despite their large investments over the offseason.</p>
+
+<p><img src="/images/bullpen_update/woba_2017-18.png" alt="blah" /></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Team</th>
+<th align="right">2017 wOBA</th>
+<th align="right">2018 wOBA</th>
+<th align="right">wOBA Diff</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">ARI</td>
+<td align="right">0.298</td>
+<td align="right">0.249</td>
+<td align="right">-0.049</td>
+</tr>
+
+<tr>
+<td align="left">MIL</td>
+<td align="right">0.314</td>
+<td align="right">0.270</td>
+<td align="right">-0.044</td>
+</tr>
+
+<tr>
+<td align="left">SD</td>
+<td align="right">0.318</td>
+<td align="right">0.278</td>
+<td align="right">-0.040</td>
+</tr>
+
+<tr>
+<td align="left">HOU</td>
+<td align="right">0.308</td>
+<td align="right">0.270</td>
+<td align="right">-0.038</td>
+</tr>
+
+<tr>
+<td align="left">NYM</td>
+<td align="right">0.332</td>
+<td align="right">0.298</td>
+<td align="right">-0.034</td>
+</tr>
+
+<tr>
+<td align="left">DET</td>
+<td align="right">0.351</td>
+<td align="right">0.321</td>
+<td align="right">-0.030</td>
+</tr>
+
+<tr>
+<td align="left">PHI</td>
+<td align="right">0.315</td>
+<td align="right">0.288</td>
+<td align="right">-0.027</td>
+</tr>
+
+<tr>
+<td align="left">CHC</td>
+<td align="right">0.301</td>
+<td align="right">0.274</td>
+<td align="right">-0.027</td>
+</tr>
+
+<tr>
+<td align="left">ATL</td>
+<td align="right">0.316</td>
+<td align="right">0.294</td>
+<td align="right">-0.022</td>
+</tr>
+
+<tr>
+<td align="left">TEX</td>
+<td align="right">0.334</td>
+<td align="right">0.315</td>
+<td align="right">-0.019</td>
+</tr>
+
+<tr>
+<td align="left">CIN</td>
+<td align="right">0.323</td>
+<td align="right">0.315</td>
+<td align="right">-0.008</td>
+</tr>
+
+<tr>
+<td align="left">PIT</td>
+<td align="right">0.314</td>
+<td align="right">0.311</td>
+<td align="right">-0.003</td>
+</tr>
+
+<tr>
+<td align="left">TOR</td>
+<td align="right">0.308</td>
+<td align="right">0.306</td>
+<td align="right">-0.002</td>
+</tr>
+
+<tr>
+<td align="left">WSH</td>
+<td align="right">0.315</td>
+<td align="right">0.313</td>
+<td align="right">-0.002</td>
+</tr>
+
+<tr>
+<td align="left">BAL</td>
+<td align="right">0.318</td>
+<td align="right">0.316</td>
+<td align="right">-0.002</td>
+</tr>
+
+<tr>
+<td align="left">COL</td>
+<td align="right">0.314</td>
+<td align="right">0.314</td>
+<td align="right">0.000</td>
+</tr>
+
+<tr>
+<td align="left">SF</td>
+<td align="right">0.318</td>
+<td align="right">0.322</td>
+<td align="right">0.004</td>
+</tr>
+
+<tr>
+<td align="left">STL</td>
+<td align="right">0.304</td>
+<td align="right">0.311</td>
+<td align="right">0.007</td>
+</tr>
+
+<tr>
+<td align="left">OAK</td>
+<td align="right">0.321</td>
+<td align="right">0.332</td>
+<td align="right">0.011</td>
+</tr>
+
+<tr>
+<td align="left">MIA</td>
+<td align="right">0.321</td>
+<td align="right">0.334</td>
+<td align="right">0.013</td>
+</tr>
+
+<tr>
+<td align="left">TB</td>
+<td align="right">0.291</td>
+<td align="right">0.304</td>
+<td align="right">0.013</td>
+</tr>
+
+<tr>
+<td align="left">SEA</td>
+<td align="right">0.305</td>
+<td align="right">0.318</td>
+<td align="right">0.013</td>
+</tr>
+
+<tr>
+<td align="left">BOS</td>
+<td align="right">0.285</td>
+<td align="right">0.299</td>
+<td align="right">0.014</td>
+</tr>
+
+<tr>
+<td align="left">NYY</td>
+<td align="right">0.273</td>
+<td align="right">0.288</td>
+<td align="right">0.015</td>
+</tr>
+
+<tr>
+<td align="left">MIN</td>
+<td align="right">0.318</td>
+<td align="right">0.336</td>
+<td align="right">0.018</td>
+</tr>
+
+<tr>
+<td align="left">LAA</td>
+<td align="right">0.295</td>
+<td align="right">0.322</td>
+<td align="right">0.027</td>
+</tr>
+
+<tr>
+<td align="left">CWS</td>
+<td align="right">0.317</td>
+<td align="right">0.353</td>
+<td align="right">0.036</td>
+</tr>
+
+<tr>
+<td align="left">LAD</td>
+<td align="right">0.283</td>
+<td align="right">0.319</td>
+<td align="right">0.036</td>
+</tr>
+
+<tr>
+<td align="left">KC</td>
+<td align="right">0.316</td>
+<td align="right">0.353</td>
+<td align="right">0.037</td>
+</tr>
+
+<tr>
+<td align="left">CLE</td>
+<td align="right">0.276</td>
+<td align="right">0.340</td>
+<td align="right">0.064</td>
+</tr>
+</tbody>
+</table>
+
+<p>However, actual results don&rsquo;t tell the story. We can also look at the results each bullpen should expect given the data on batted balls allowed.</p>
+
+<p><img src="/images/bullpen_update/xwoba_2017-18.png" alt="blah" /></p>
+
+<p>Here, we can see that the Rockies&rsquo; bullpen has actually been worse than last year in terms of expected results. There is very little correlation between either actual or expected bullpen results from year to year.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Team</th>
+<th align="right">2017 xwOBA</th>
+<th align="right">2018 xwOBA</th>
+<th align="right">xwOBA Diff</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">DET</td>
+<td align="right">0.345</td>
+<td align="right">0.325</td>
+<td align="right">-0.020</td>
+</tr>
+
+<tr>
+<td align="left">SD</td>
+<td align="right">0.310</td>
+<td align="right">0.294</td>
+<td align="right">-0.016</td>
+</tr>
+
+<tr>
+<td align="left">MIL</td>
+<td align="right">0.305</td>
+<td align="right">0.293</td>
+<td align="right">-0.012</td>
+</tr>
+
+<tr>
+<td align="left">ATL</td>
+<td align="right">0.322</td>
+<td align="right">0.314</td>
+<td align="right">-0.008</td>
+</tr>
+
+<tr>
+<td align="left">OAK</td>
+<td align="right">0.326</td>
+<td align="right">0.321</td>
+<td align="right">-0.005</td>
+</tr>
+
+<tr>
+<td align="left">ARI</td>
+<td align="right">0.308</td>
+<td align="right">0.303</td>
+<td align="right">-0.005</td>
+</tr>
+
+<tr>
+<td align="left">BAL</td>
+<td align="right">0.322</td>
+<td align="right">0.318</td>
+<td align="right">-0.004</td>
+</tr>
+
+<tr>
+<td align="left">MIN</td>
+<td align="right">0.328</td>
+<td align="right">0.325</td>
+<td align="right">-0.003</td>
+</tr>
+
+<tr>
+<td align="left">PHI</td>
+<td align="right">0.309</td>
+<td align="right">0.309</td>
+<td align="right">0.000</td>
+</tr>
+
+<tr>
+<td align="left">CHC</td>
+<td align="right">0.307</td>
+<td align="right">0.307</td>
+<td align="right">0.000</td>
+</tr>
+
+<tr>
+<td align="left">NYM</td>
+<td align="right">0.318</td>
+<td align="right">0.320</td>
+<td align="right">0.002</td>
+</tr>
+
+<tr>
+<td align="left">PIT</td>
+<td align="right">0.314</td>
+<td align="right">0.322</td>
+<td align="right">0.008</td>
+</tr>
+
+<tr>
+<td align="left">HOU</td>
+<td align="right">0.295</td>
+<td align="right">0.307</td>
+<td align="right">0.012</td>
+</tr>
+
+<tr>
+<td align="left">SF</td>
+<td align="right">0.315</td>
+<td align="right">0.329</td>
+<td align="right">0.014</td>
+</tr>
+
+<tr>
+<td align="left">BOS</td>
+<td align="right">0.299</td>
+<td align="right">0.313</td>
+<td align="right">0.014</td>
+</tr>
+
+<tr>
+<td align="left">TOR</td>
+<td align="right">0.299</td>
+<td align="right">0.315</td>
+<td align="right">0.016</td>
+</tr>
+
+<tr>
+<td align="left">WSH</td>
+<td align="right">0.311</td>
+<td align="right">0.329</td>
+<td align="right">0.018</td>
+</tr>
+
+<tr>
+<td align="left">MIA</td>
+<td align="right">0.320</td>
+<td align="right">0.338</td>
+<td align="right">0.018</td>
+</tr>
+
+<tr>
+<td align="left">CIN</td>
+<td align="right">0.309</td>
+<td align="right">0.329</td>
+<td align="right">0.020</td>
+</tr>
+
+<tr>
+<td align="left">SEA</td>
+<td align="right">0.308</td>
+<td align="right">0.329</td>
+<td align="right">0.021</td>
+</tr>
+
+<tr>
+<td align="left">TEX</td>
+<td align="right">0.319</td>
+<td align="right">0.342</td>
+<td align="right">0.023</td>
+</tr>
+
+<tr>
+<td align="left">CWS</td>
+<td align="right">0.321</td>
+<td align="right">0.347</td>
+<td align="right">0.026</td>
+</tr>
+
+<tr>
+<td align="left">NYY</td>
+<td align="right">0.288</td>
+<td align="right">0.314</td>
+<td align="right">0.026</td>
+</tr>
+
+<tr>
+<td align="left">COL</td>
+<td align="right">0.299</td>
+<td align="right">0.330</td>
+<td align="right">0.031</td>
+</tr>
+
+<tr>
+<td align="left">TB</td>
+<td align="right">0.291</td>
+<td align="right">0.326</td>
+<td align="right">0.035</td>
+</tr>
+
+<tr>
+<td align="left">STL</td>
+<td align="right">0.305</td>
+<td align="right">0.340</td>
+<td align="right">0.035</td>
+</tr>
+
+<tr>
+<td align="left">LAA</td>
+<td align="right">0.301</td>
+<td align="right">0.339</td>
+<td align="right">0.038</td>
+</tr>
+
+<tr>
+<td align="left">LAD</td>
+<td align="right">0.279</td>
+<td align="right">0.318</td>
+<td align="right">0.039</td>
+</tr>
+
+<tr>
+<td align="left">KC</td>
+<td align="right">0.307</td>
+<td align="right">0.365</td>
+<td align="right">0.058</td>
+</tr>
+
+<tr>
+<td align="left">CLE</td>
+<td align="right">0.283</td>
+<td align="right">0.346</td>
+<td align="right">0.063</td>
+</tr>
+</tbody>
+</table>
+
+<p>Finally, here&rsquo;s a table that shows how each team&rsquo;s bullpen &ldquo;luck&rdquo; has changed year to year, where &ldquo;luck&rdquo; is defined as xwOBA-wOBA. The one that stands out the most is the Diamondbacks. Luck is also unsurprisingly inconsistent year-to-year.</p>
+
+<p><img src="/images/bullpen_update/luck_2017-18.png" alt="blah" /></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Team</th>
+<th align="right">2017 Luck</th>
+<th align="right">2018 Luck</th>
+<th align="right">Luck Diff</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">MIN</td>
+<td align="right">0.010</td>
+<td align="right">-0.011</td>
+<td align="right">-0.021</td>
+</tr>
+
+<tr>
+<td align="left">OAK</td>
+<td align="right">0.005</td>
+<td align="right">-0.011</td>
+<td align="right">-0.016</td>
+</tr>
+
+<tr>
+<td align="left">CWS</td>
+<td align="right">0.004</td>
+<td align="right">-0.006</td>
+<td align="right">-0.010</td>
+</tr>
+
+<tr>
+<td align="left">BAL</td>
+<td align="right">0.004</td>
+<td align="right">0.002</td>
+<td align="right">-0.002</td>
+</tr>
+
+<tr>
+<td align="left">CLE</td>
+<td align="right">0.007</td>
+<td align="right">0.006</td>
+<td align="right">-0.001</td>
+</tr>
+
+<tr>
+<td align="left">BOS</td>
+<td align="right">0.014</td>
+<td align="right">0.014</td>
+<td align="right">0.000</td>
+</tr>
+
+<tr>
+<td align="left">LAD</td>
+<td align="right">-0.004</td>
+<td align="right">-0.001</td>
+<td align="right">0.003</td>
+</tr>
+
+<tr>
+<td align="left">MIA</td>
+<td align="right">-0.001</td>
+<td align="right">0.004</td>
+<td align="right">0.005</td>
+</tr>
+
+<tr>
+<td align="left">SEA</td>
+<td align="right">0.003</td>
+<td align="right">0.011</td>
+<td align="right">0.008</td>
+</tr>
+
+<tr>
+<td align="left">DET</td>
+<td align="right">-0.006</td>
+<td align="right">0.004</td>
+<td align="right">0.010</td>
+</tr>
+
+<tr>
+<td align="left">SF</td>
+<td align="right">-0.003</td>
+<td align="right">0.007</td>
+<td align="right">0.010</td>
+</tr>
+
+<tr>
+<td align="left">PIT</td>
+<td align="right">0.000</td>
+<td align="right">0.011</td>
+<td align="right">0.011</td>
+</tr>
+
+<tr>
+<td align="left">LAA</td>
+<td align="right">0.006</td>
+<td align="right">0.017</td>
+<td align="right">0.011</td>
+</tr>
+
+<tr>
+<td align="left">NYY</td>
+<td align="right">0.015</td>
+<td align="right">0.026</td>
+<td align="right">0.011</td>
+</tr>
+
+<tr>
+<td align="left">ATL</td>
+<td align="right">0.006</td>
+<td align="right">0.020</td>
+<td align="right">0.014</td>
+</tr>
+
+<tr>
+<td align="left">TOR</td>
+<td align="right">-0.009</td>
+<td align="right">0.009</td>
+<td align="right">0.018</td>
+</tr>
+
+<tr>
+<td align="left">WSH</td>
+<td align="right">-0.004</td>
+<td align="right">0.016</td>
+<td align="right">0.020</td>
+</tr>
+
+<tr>
+<td align="left">KC</td>
+<td align="right">-0.009</td>
+<td align="right">0.012</td>
+<td align="right">0.021</td>
+</tr>
+
+<tr>
+<td align="left">TB</td>
+<td align="right">0.000</td>
+<td align="right">0.022</td>
+<td align="right">0.022</td>
+</tr>
+
+<tr>
+<td align="left">SD</td>
+<td align="right">-0.008</td>
+<td align="right">0.016</td>
+<td align="right">0.024</td>
+</tr>
+
+<tr>
+<td align="left">CHC</td>
+<td align="right">0.006</td>
+<td align="right">0.033</td>
+<td align="right">0.027</td>
+</tr>
+
+<tr>
+<td align="left">PHI</td>
+<td align="right">-0.006</td>
+<td align="right">0.021</td>
+<td align="right">0.027</td>
+</tr>
+
+<tr>
+<td align="left">CIN</td>
+<td align="right">-0.014</td>
+<td align="right">0.014</td>
+<td align="right">0.028</td>
+</tr>
+
+<tr>
+<td align="left">STL</td>
+<td align="right">0.001</td>
+<td align="right">0.029</td>
+<td align="right">0.028</td>
+</tr>
+
+<tr>
+<td align="left">COL</td>
+<td align="right">-0.015</td>
+<td align="right">0.016</td>
+<td align="right">0.031</td>
+</tr>
+
+<tr>
+<td align="left">MIL</td>
+<td align="right">-0.009</td>
+<td align="right">0.023</td>
+<td align="right">0.032</td>
+</tr>
+
+<tr>
+<td align="left">NYM</td>
+<td align="right">-0.014</td>
+<td align="right">0.022</td>
+<td align="right">0.036</td>
+</tr>
+
+<tr>
+<td align="left">TEX</td>
+<td align="right">-0.015</td>
+<td align="right">0.027</td>
+<td align="right">0.042</td>
+</tr>
+
+<tr>
+<td align="left">ARI</td>
+<td align="right">0.010</td>
+<td align="right">0.054</td>
+<td align="right">0.044</td>
+</tr>
+
+<tr>
+<td align="left">HOU</td>
+<td align="right">-0.013</td>
+<td align="right">0.037</td>
+<td align="right">0.050</td>
+</tr>
+</tbody>
+</table>
+
+<p>On the whole, xwOBA is up this year (by a mean of 0.0148), but wOBA is down very slightly (by a mean of -0.0013). This gap will probably decrease as luck evens out and the weather continues to get better over the course of the season.</p>
+
+  </div>
+    
+  
         
   <div class="post">
     <h1 class="post-title">
@@ -129,7 +839,7 @@
 
     <p>Spin is one of the most-discussed relatively new Statcast metrics. It is especially relevant when looking at four-seam fastballs, as that pitch tends to be the most straightforward and therefore easiest to predict movement-wise. We know spin has a positive effect on fastballs, but what is the extent of that effect? Are there any potential cons to throwing a ball with such a high spin rate?</p>
 
-<p>Here are the four-seam spin kings from 2015-2017<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>:</p>
+<p>Here are the four-seam spin kings from 2015-2017<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>:</p>
 
 <table>
 <thead>
@@ -590,9 +1300,9 @@
 </tbody>
 </table>
 
-<p>Against the Reds, Bryant&rsquo;s batted ball profile had a more optimal launch angle and greater velocity, distance, and barrel frequency.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+<p>Against the Reds, Bryant&rsquo;s batted ball profile had a more optimal launch angle and greater velocity, distance, and barrel frequency.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
 
-<p>The code for this analysis is located here.<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> Much of the data for this post was collected from Baseball Reference.</p>
+<p>The code for this analysis is located here.<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup> Much of the data for this post was collected from Baseball Reference.</p>
 <div class="footnotes">
 
 <hr />
@@ -618,7 +1328,7 @@
 
     <span class="post-date">Tue, Mar 28, 2017</span>
 
-    <p>In an attempt to sharpen my data visualization skills, I decided to look at some of the top starters from the 2016 season by inning. The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season. One thing to keep in mind with all of these is that as the game goes on the sample size decreases. Starters rarely made it through the ninth inning this season, so later game results should be taken with a grain of salt. This type of analysis is best for getting a broad idea of a pitcher.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+    <p>In an attempt to sharpen my data visualization skills, I decided to look at some of the top starters from the 2016 season by inning. The pitchers were selected by a combination of innings pitched, complete games, and personal preference. Each pitcher pitched at least 150 innings last season. One thing to keep in mind with all of these is that as the game goes on the sample size decreases. Starters rarely made it through the ninth inning this season, so later game results should be taken with a grain of salt. This type of analysis is best for getting a broad idea of a pitcher.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
 
 <p><em>The x-axis for each of these graphs is innings. The y-axis varies based on the metric being measured.</em></p>
 
@@ -663,7 +1373,7 @@
 
     <p><em>This post was featured on the Fangraphs community blog <a href="http://www.fangraphs.com/community/carl-edwards-had-a-bad-day-in-a-great-year/">here</a></em></p>
 
-<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
 <p>I&rsquo;ve been particularly intrigued recently by <a href="http://www.baseball-reference.com/players/e/edwarca01.shtml">Carl Edwards Jr.</a>, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&rsquo;t aware quite how good he was until I calculated <a href="http://www.fangraphs.com/library/offense/woba/">wOBA</a> allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&rsquo;s top closers and the game&rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:</p>
 
@@ -757,24 +1467,20 @@
 <p>We&rsquo;ll get back to these games later.</p>
 
 <p>As the Cubs consistently carried three catchers last season, I thought it would be interesting to compare Edwards&rsquo; performance across all three:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>cej_by_catcher &lt;- cej %&gt;%
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej_by_catcher &lt;- cej %&gt;%
   group_by(pitch_type, catcher) %&gt;%
   summarize(n = n(),
-            avg_mph = <span style="color: #0000aa">mean</span>(<span style="color: #0000aa">as.numeric</span>(<span style="color: #0000aa">as.character</span>(start_speed)), na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_spin = <span style="color: #0000aa">mean</span>(<span style="color: #0000aa">as.numeric</span>(<span style="color: #0000aa">as.character</span>(spin_rate)), na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_distance = <span style="color: #0000aa">mean</span>(hit_distance_sc, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_speed = <span style="color: #0000aa">mean</span>(hit_speed, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_hit_angle = <span style="color: #0000aa">mean</span>(hit_angle, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_barrel = <span style="color: #0000aa">mean</span>(barrel, na.rm = <span style="color: #0000aa">TRUE</span>),
-            avg_ext = <span style="color: #0000aa">mean</span>(release_extension, na.rm = <span style="color: #0000aa">TRUE</span>)) %&gt;%
-  mutate(pitch_pct = n/<span style="color: #0000aa">sum</span>(n)) %&gt;%
-  filter(pitch_type != <span style="color: #aa5500">&quot;CH&quot;</span>, pitch_type != <span style="color: #aa5500">&quot;IN&quot;</span>) <span style="color: #aaaaaa; font-style: italic"># These each occur once and may be mistakes</span>
-</pre></div>
-
+            avg_mph = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(start_speed)), na.rm = <span style="color:#00a">TRUE</span>),
+            avg_spin = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(spin_rate)), na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_distance = <span style="color:#00a">mean</span>(hit_distance_sc, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_speed = <span style="color:#00a">mean</span>(hit_speed, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_hit_angle = <span style="color:#00a">mean</span>(hit_angle, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_barrel = <span style="color:#00a">mean</span>(barrel, na.rm = <span style="color:#00a">TRUE</span>),
+            avg_ext = <span style="color:#00a">mean</span>(release_extension, na.rm = <span style="color:#00a">TRUE</span>)) %&gt;%
+  mutate(pitch_pct = n/<span style="color:#00a">sum</span>(n)) %&gt;%
+  filter(pitch_type != <span style="color:#a50">&#34;CH&#34;</span>, pitch_type != <span style="color:#a50">&#34;IN&#34;</span>) <span style="color:#aaa;font-style:italic"># These each occur once and may be mistakes</span></code></pre></div>
 <p>The <code>baseballr</code> package also allows us to look at Statcast data from Baseball Savant:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>cej &lt;- scrape_statcast_savant_pitcher(start_date = <span style="color: #aa5500">&quot;2016-04-06&quot;</span>, end_date = <span style="color: #aa5500">&quot;2016-10-15&quot;</span>, pitcherid = <span style="color: #009999">605218</span>)
-</pre></div>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej &lt;- scrape_statcast_savant_pitcher(start_date = <span style="color:#a50">&#34;2016-04-06&#34;</span>, end_date = <span style="color:#a50">&#34;2016-10-15&#34;</span>, pitcherid = <span style="color:#099">605218</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -888,7 +1594,7 @@
 
 <p><img src="/images/cesv1.png" alt="blah" /></p>
 
-<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
+<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
 
 <p><img src="/images/cevd2.png" alt="blah" /></p>
 
@@ -1017,20 +1723,18 @@ endpoint to get the list of games that happened on any given day.</p>
 
 <p>One of the nicer things I added to the Shiny app was the use of the <code>tryCatch</code>
 function to hide confusing error messages from the user, like this:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">tryCatch</span>({
-     splitGames &lt;- <span style="color: #0000aa">unlist</span>(<span style="color: #0000aa">strsplit</span>(input$game, <span style="color: #aa5500">&quot; @ &quot;</span>))
-     away &lt;- teams[<span style="color: #0000aa">which</span>(<span style="color: #0000aa">grepl</span>(splitGames[<span style="color: #009999">1</span>], <span style="color: #0000aa">names</span>(teams)))]
-     home &lt;- teams[<span style="color: #0000aa">which</span>(<span style="color: #0000aa">grepl</span>(splitGames[<span style="color: #009999">2</span>], <span style="color: #0000aa">names</span>(teams)))]
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#00a">tryCatch</span>({
+     splitGames &lt;- <span style="color:#00a">unlist</span>(<span style="color:#00a">strsplit</span>(input$game, <span style="color:#a50">&#34; @ &#34;</span>))
+     away &lt;- teams[<span style="color:#00a">which</span>(<span style="color:#00a">grepl</span>(splitGames[<span style="color:#099">1</span>], <span style="color:#00a">names</span>(teams)))]
+     home &lt;- teams[<span style="color:#00a">which</span>(<span style="color:#00a">grepl</span>(splitGames[<span style="color:#099">2</span>], <span style="color:#00a">names</span>(teams)))]
 
      data &lt;- getEvents(year, month, day, away, home)
-     sliderInput(<span style="color: #aa5500">&quot;event&quot;</span>, <span style="color: #aa5500">&quot;Event:&quot;</span>,
-                 min = <span style="color: #009999">1</span>, max = <span style="color: #0000aa">length</span>(data$probabilities),
-                 value = <span style="color: #0000aa">length</span>(data$probabilities), sep = <span style="color: #009999">1</span>)
-   }, error = <span style="color: #0000aa">function</span>(e) {
-     <span style="color: #0000aa">stop</span>(<span style="color: #aa5500">&quot;That is not a valid event&quot;</span>)
-   })
-</pre></div>
-
+     sliderInput(<span style="color:#a50">&#34;event&#34;</span>, <span style="color:#a50">&#34;Event:&#34;</span>,
+                 min = <span style="color:#099">1</span>, max = <span style="color:#00a">length</span>(data$probabilities),
+                 value = <span style="color:#00a">length</span>(data$probabilities), sep = <span style="color:#099">1</span>)
+   }, error = <span style="color:#00a">function</span>(e) {
+     <span style="color:#00a">stop</span>(<span style="color:#a50">&#34;That is not a valid event&#34;</span>)
+   })</code></pre></div>
 <p>In reality, much of my week was spent fighting with R&rsquo;s several methods of
 dealing with strings and arrays. Most of the changes this week were in the front
 end user-facing part of the app, so I&rsquo;m excited to work more on the backend next
@@ -1100,75 +1804,71 @@ on May 10th of last season between the Padres and the Cubs.</p>
 
 <p>First, we utilize the two functions <code>probabilities_from_game/2</code> and <code>descriptions_from_game/2</code>
 to get vectors of win expectancies and descriptions of every event that occurred in the game:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>iex(<span style="color: #009999">1</span>)&gt; <span style="color: #00aa00; text-decoration: underline">BaseballSlurper.Server</span>.probabilities_from_game(<span style="color: #aa5500">&quot;2016-05-10&quot;</span>, [<span style="color: #aa5500">&quot;sdn&quot;</span>, <span style="color: #aa5500">&quot;chn&quot;</span>])
-[[<span style="color: #009999">0.5652355266525733</span>, <span style="color: #009999">0.5826495329514373</span>, <span style="color: #009999">0.593064127007075</span>],
- [<span style="color: #009999">0.5669081828973761</span>, <span style="color: #009999">0.5470361185179661</span>, <span style="color: #009999">0.534091190836288</span>],
- [<span style="color: #009999">0.5569277494191046</span>, <span style="color: #009999">0.5742743999613658</span>, <span style="color: #009999">0.5803200220916497</span>],...]
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elixir" data-lang="elixir">iex(<span style="color:#099">1</span>)&gt; <span style="color:#0a0">BaseballSlurper.Server</span>.probabilities_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
+[[<span style="color:#099">0.5652355266525733</span>, <span style="color:#099">0.5826495329514373</span>, <span style="color:#099">0.593064127007075</span>],
+ [<span style="color:#099">0.5669081828973761</span>, <span style="color:#099">0.5470361185179661</span>, <span style="color:#099">0.534091190836288</span>],
+ [<span style="color:#099">0.5569277494191046</span>, <span style="color:#099">0.5742743999613658</span>, <span style="color:#099">0.5803200220916497</span>],...]
 
-iex(<span style="color: #009999">2</span>)&gt; <span style="color: #00aa00; text-decoration: underline">BaseballSlurper.Server</span>.descriptions_from_game(<span style="color: #aa5500">&quot;2016-05-10&quot;</span>, [<span style="color: #aa5500">&quot;sdn&quot;</span>, <span style="color: #aa5500">&quot;chn&quot;</span>])
-[[<span style="color: #aa5500">&quot;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&quot;</span>,
-  <span style="color: #aa5500">&quot;Wil Myers flies out to center fielder Dexter Fowler.&quot;</span>,
-  <span style="color: #aa5500">&quot;Matt Kemp lines out to center fielder Dexter Fowler.&quot;</span>],
- [<span style="color: #aa5500">&quot;Dexter Fowler strikes out swinging.&quot;</span>,
-  <span style="color: #aa5500">&quot;Jason Heyward lines out to center fielder Jon Jay.&quot;</span>,
-  <span style="color: #aa5500">&quot;Kris Bryant lines out to right fielder Matt Kemp.&quot;</span>],...]
-</pre></div>
-
+iex(<span style="color:#099">2</span>)&gt; <span style="color:#0a0">BaseballSlurper.Server</span>.descriptions_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
+[[<span style="color:#a50">&#34;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&#34;</span>,
+  <span style="color:#a50">&#34;Wil Myers flies out to center fielder Dexter Fowler.&#34;</span>,
+  <span style="color:#a50">&#34;Matt Kemp lines out to center fielder Dexter Fowler.&#34;</span>],
+ [<span style="color:#a50">&#34;Dexter Fowler strikes out swinging.&#34;</span>,
+  <span style="color:#a50">&#34;Jason Heyward lines out to center fielder Jon Jay.&#34;</span>,
+  <span style="color:#a50">&#34;Kris Bryant lines out to right fielder Matt Kemp.&#34;</span>],...]</code></pre></div>
 <p>We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000aa">library</span>(plotly)
-<span style="color: #0000aa">Sys.setenv</span>(<span style="color: #aa5500">&quot;plotly_username&quot;</span> = <span style="color: #aa5500">&quot;benfb&quot;</span>)
-<span style="color: #0000aa">Sys.setenv</span>(<span style="color: #aa5500">&quot;plotly_api_key&quot;</span> = API_KEY)
-probabilities &lt;- <span style="color: #00aaaa">c</span>(PROBABILITY_VECTOR)
-x &lt;- <span style="color: #0000aa">seq_along</span>(y)
-event &lt;- <span style="color: #00aaaa">c</span>(DESCRIPTION_VECTOR)
-data &lt;- <span style="color: #00aaaa">data.frame</span>(x, y, event)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#00a">library</span>(plotly)
+<span style="color:#00a">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_username&#34;</span> = <span style="color:#a50">&#34;benfb&#34;</span>)
+<span style="color:#00a">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_api_key&#34;</span> = API_KEY)
+probabilities &lt;- <span style="color:#0aa">c</span>(PROBABILITY_VECTOR)
+x &lt;- <span style="color:#00a">seq_along</span>(y)
+event &lt;- <span style="color:#0aa">c</span>(DESCRIPTION_VECTOR)
+data &lt;- <span style="color:#0aa">data.frame</span>(x, y, event)
 
-kb &lt;- <span style="color: #00aaaa">list</span>(
-  xref = <span style="color: #aa5500">&#39;paper&#39;</span>,
-  yref = <span style="color: #aa5500">&#39;y&#39;</span>,
-  x = <span style="color: #0000aa">seq</span>(<span style="color: #009999">0</span>, <span style="color: #009999">1</span>, by=(<span style="color: #009999">1</span>/<span style="color: #0000aa">length</span>(x)))[<span style="color: #009999">23</span>],
-  y = probabilities[<span style="color: #009999">23</span>],
-  xanchor = <span style="color: #aa5500">&#39;right&#39;</span>,
-  yanchor = <span style="color: #aa5500">&#39;middle&#39;</span>,
-  text = <span style="color: #aa5500">&#39;K Bryant Double&#39;</span>,
-  font = <span style="color: #00aaaa">list</span>(family = <span style="color: #aa5500">&#39;Arial&#39;</span>,
-              size = <span style="color: #009999">16</span>,
-              color = <span style="color: #aa5500">&#39;rgba(67,67,67,1)&#39;</span>),
-  showarrow = <span style="color: #0000aa">FALSE</span>)
+kb &lt;- <span style="color:#0aa">list</span>(
+  xref = <span style="color:#a50">&#39;paper&#39;</span>,
+  yref = <span style="color:#a50">&#39;y&#39;</span>,
+  x = <span style="color:#00a">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#00a">length</span>(x)))[<span style="color:#099">23</span>],
+  y = probabilities[<span style="color:#099">23</span>],
+  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
+  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
+  text = <span style="color:#a50">&#39;K Bryant Double&#39;</span>,
+  font = <span style="color:#0aa">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
+              size = <span style="color:#099">16</span>,
+              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
+  showarrow = <span style="color:#00a">FALSE</span>)
 
-ad &lt;- <span style="color: #00aaaa">list</span>(
-  xref = <span style="color: #aa5500">&#39;paper&#39;</span>,
-  yref = <span style="color: #aa5500">&#39;y&#39;</span>,
-  x = <span style="color: #0000aa">seq</span>(<span style="color: #009999">0</span>, <span style="color: #009999">1</span>, by=(<span style="color: #009999">1</span>/<span style="color: #0000aa">length</span>(x)))[<span style="color: #009999">72</span>],
-  y = probabilities[<span style="color: #009999">72</span>],
-  xanchor = <span style="color: #aa5500">&#39;right&#39;</span>,
-  yanchor = <span style="color: #aa5500">&#39;middle&#39;</span>,
-  text = <span style="color: #aa5500">&#39;A Dickerson Home Run&#39;</span>,
-  font = <span style="color: #00aaaa">list</span>(family = <span style="color: #aa5500">&#39;Arial&#39;</span>,
-              size = <span style="color: #009999">16</span>,
-              color = <span style="color: #aa5500">&#39;rgba(67,67,67,1)&#39;</span>),
-  showarrow = <span style="color: #0000aa">FALSE</span>)
+ad &lt;- <span style="color:#0aa">list</span>(
+  xref = <span style="color:#a50">&#39;paper&#39;</span>,
+  yref = <span style="color:#a50">&#39;y&#39;</span>,
+  x = <span style="color:#00a">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#00a">length</span>(x)))[<span style="color:#099">72</span>],
+  y = probabilities[<span style="color:#099">72</span>],
+  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
+  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
+  text = <span style="color:#a50">&#39;A Dickerson Home Run&#39;</span>,
+  font = <span style="color:#0aa">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
+              size = <span style="color:#099">16</span>,
+              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
+  showarrow = <span style="color:#00a">FALSE</span>)
 
 p &lt;- plot_ly(
   data,
-  x = <span style="color: #0000aa">seq_along</span>(y),
+  x = <span style="color:#00a">seq_along</span>(y),
   y = probabilities,
-  type = <span style="color: #aa5500">&#39;scatter&#39;</span>,
-  mode = <span style="color: #aa5500">&#39;lines&#39;</span>,
+  type = <span style="color:#a50">&#39;scatter&#39;</span>,
+  mode = <span style="color:#a50">&#39;lines&#39;</span>,
   text = event) %&gt;%
 layout(
-  title = <span style="color: #aa5500">&#39;SDN @ CHN 2016-05-10&#39;</span>,
-  xaxis = <span style="color: #00aaaa">list</span>(title = <span style="color: #aa5500">&#39;Game Event&#39;</span>),
-  yaxis = <span style="color: #00aaaa">list</span>(title = <span style="color: #aa5500">&#39;Home Team Win Probability&#39;</span>)) %&gt;%
-layout(annotations = <span style="color: #00aaaa">list</span>(kb, ad))
-</pre></div>
-
+  title = <span style="color:#a50">&#39;SDN @ CHN 2016-05-10&#39;</span>,
+  xaxis = <span style="color:#0aa">list</span>(title = <span style="color:#a50">&#39;Game Event&#39;</span>),
+  yaxis = <span style="color:#0aa">list</span>(title = <span style="color:#a50">&#39;Home Team Win Probability&#39;</span>)) %&gt;%
+layout(annotations = <span style="color:#0aa">list</span>(kb, ad))</code></pre></div>
 <p>This R code yields the following chart:</p>
 
 <iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plot.ly/~benfb/0.embed"></iframe>
 
 <p>For comparison, the Fangraph&rsquo;s win expectancy graph is <a href="http://www.fangraphs.com/wins.aspx?date=2016-05-10&amp;team=Cubs&amp;dh=0&amp;season=2016">here</a>, and you can find
-the full video of the game on <a href="https://www.youtube.com/watch?v=wGqoB_8hNtw">MLB&rsquo;s YouTube channel</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+the full video of the game on <a href="https://www.youtube.com/watch?v=wGqoB_8hNtw">MLB&rsquo;s YouTube channel</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
 <p>The next step will be to automate this process and look into self-hosting
 the graphs instead of going through Plotly&rsquo;s rate-limited API.</p>
