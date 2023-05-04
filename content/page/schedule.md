@@ -3,7 +3,7 @@ title = "Schedule"
 Description = ""
 menu = "main"
 date = "2017-02-21T18:54:36-05:00"
-
+draft = true
 +++
 
 1. [2017-02-14][1]
