@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ben Does Baseball</title>
@@ -6,10 +6,17 @@
     <description>Recent content on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 11:48:35 -0500</lastBuildDate>
-    
-	<atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 29 Sep 2018 14:56:26 -0500</lastBuildDate><atom:link href="https://baseball.benbailey.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens After a Home Run?</title>
+      <link>https://baseball.benbailey.me/2018/09/what-happens-after-a-home-run/</link>
+      <pubDate>Sat, 29 Sep 2018 14:56:26 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2018/09/what-happens-after-a-home-run/</guid>
+      <description>We all know what a home run looks like. It&amp;rsquo;s one of baseball&amp;rsquo;s most common, though perhaps not best, types of highlights.
+It has always seemed to me that batters are more likely to swing at the first pitch after a home run.
+This plot shows the likelihood of the first pitch after a home run being a called strike plotted against the likelihood that the first pitch of any plate appearance is a called strike.</description>
+    </item>
     
     <item>
       <title>A 2018 Bullpen Update</title>
@@ -107,22 +114,8 @@ One of the nicer things I added to the Shiny app was the use of the tryCatch fun
       
       <guid>https://baseball.benbailey.me/resources/</guid>
       <description>Some resources used for the posts on this site:
- Fangraphs: Analytical articles and statistical database Baseball-Reference: Very thorough statistical database Baseball Savant: Statcast/advanced metrics search and leaderboards Brooks Baseball: PitchFX analysis and granular data  From a technical side:
- Plot.ly Hugo RStudio BaseballR package  </description>
-    </item>
-    
-    <item>
-      <title>Schedule</title>
-      <link>https://baseball.benbailey.me/schedule/</link>
-      <pubDate>Tue, 21 Feb 2017 18:54:36 -0500</pubDate>
-      
-      <guid>https://baseball.benbailey.me/schedule/</guid>
-      <description>2017-02-14
- Set up blog Look into win probability calculation Make a nice probability graph  2017-02-21
- Create Shiny app Move graphs to Shiny Automate creation of graphs Set up hosting  2017-03-03
- Improve Shiny UI Improve Shiny UX Add API endpoints to support the above improvements  2017-03-22
- Research win probability modeling Play around with baseballr package Practice more specific analysis  2017-03-29
- Modeling pitcher performance by inning Combining ggplot plots  2017-04-05</description>
+Fangraphs: Analytical articles and statistical database Baseball-Reference: Very thorough statistical database Baseball Savant: Statcast/advanced metrics search and leaderboards Brooks Baseball: PitchFX analysis and granular data From a technical side:
+Plot.ly Hugo RStudio BaseballR package </description>
     </item>
     
     <item>

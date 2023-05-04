@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Ben Does Baseball</title>
@@ -6,10 +6,17 @@
     <description>Recent content in Posts on Ben Does Baseball</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 11:48:35 -0500</lastBuildDate>
-    
-	<atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 29 Sep 2018 14:56:26 -0500</lastBuildDate><atom:link href="https://baseball.benbailey.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens After a Home Run?</title>
+      <link>https://baseball.benbailey.me/2018/09/what-happens-after-a-home-run/</link>
+      <pubDate>Sat, 29 Sep 2018 14:56:26 -0500</pubDate>
+      
+      <guid>https://baseball.benbailey.me/2018/09/what-happens-after-a-home-run/</guid>
+      <description>We all know what a home run looks like. It&amp;rsquo;s one of baseball&amp;rsquo;s most common, though perhaps not best, types of highlights.
+It has always seemed to me that batters are more likely to swing at the first pitch after a home run.
+This plot shows the likelihood of the first pitch after a home run being a called strike plotted against the likelihood that the first pitch of any plate appearance is a called strike.</description>
+    </item>
     
     <item>
       <title>A 2018 Bullpen Update</title>

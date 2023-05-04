@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.40.2" />
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="" rel="alternate" type="application/rss+xml" title="Ben Does Baseball" />
+  
 </head>
 
 	<body class="theme-base-09 ">
@@ -42,11 +42,9 @@
       
         <li><a href="/resources/"> Resources </a></li>
       
-        <li><a href="/schedule/"> Schedule </a></li>
-      
     </ul>
 
-    <p>&copy; 2018. All rights reserved. </p>
+    <p>&copy; 2023. All rights reserved. </p>
   </div>
 </div>
 
@@ -59,22 +57,21 @@
 <code>renderUI</code> function to dynamically generate the options for the game select
 dropdown. I also set up a baseball API <a href="http://bbbaseball.herokuapp.com">here</a>, and added another API
 endpoint to get the list of games that happened on any given day.</p>
-
 <p>One of the nicer things I added to the Shiny app was the use of the <code>tryCatch</code>
 function to hide confusing error messages from the user, like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#00a">tryCatch</span>({
-     splitGames &lt;- <span style="color:#00a">unlist</span>(<span style="color:#00a">strsplit</span>(input$game, <span style="color:#a50">&#34; @ &#34;</span>))
-     away &lt;- teams[<span style="color:#00a">which</span>(<span style="color:#00a">grepl</span>(splitGames[<span style="color:#099">1</span>], <span style="color:#00a">names</span>(teams)))]
-     home &lt;- teams[<span style="color:#00a">which</span>(<span style="color:#00a">grepl</span>(splitGames[<span style="color:#099">2</span>], <span style="color:#00a">names</span>(teams)))]
-
-     data &lt;- getEvents(year, month, day, away, home)
-     sliderInput(<span style="color:#a50">&#34;event&#34;</span>, <span style="color:#a50">&#34;Event:&#34;</span>,
-                 min = <span style="color:#099">1</span>, max = <span style="color:#00a">length</span>(data$probabilities),
-                 value = <span style="color:#00a">length</span>(data$probabilities), sep = <span style="color:#099">1</span>)
-   }, error = <span style="color:#00a">function</span>(e) {
-     <span style="color:#00a">stop</span>(<span style="color:#a50">&#34;That is not a valid event&#34;</span>)
-   })</code></pre></div>
-<p>In reality, much of my week was spent fighting with R&rsquo;s several methods of
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#0a0">tryCatch</span>({
+</span></span><span style="display:flex;"><span>     splitGames &lt;- <span style="color:#0a0">unlist</span>(<span style="color:#0a0">strsplit</span>(input$game, <span style="color:#a50">&#34; @ &#34;</span>))
+</span></span><span style="display:flex;"><span>     away &lt;- teams<span style="color:#0a0">[which</span>(<span style="color:#0a0">grepl</span>(splitGames[1], <span style="color:#0a0">names</span>(teams)))]
+</span></span><span style="display:flex;"><span>     home &lt;- teams<span style="color:#0a0">[which</span>(<span style="color:#0a0">grepl</span>(splitGames[2], <span style="color:#0a0">names</span>(teams)))]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     data &lt;- <span style="color:#0a0">getEvents</span>(year, month, day, away, home)
+</span></span><span style="display:flex;"><span>     <span style="color:#0a0">sliderInput</span>(<span style="color:#a50">&#34;event&#34;</span>, <span style="color:#a50">&#34;Event:&#34;</span>,
+</span></span><span style="display:flex;"><span>                 min = <span style="color:#099">1</span>, max = <span style="color:#0a0">length</span>(data$probabilities),
+</span></span><span style="display:flex;"><span>                 value = <span style="color:#0a0">length</span>(data$probabilities), sep = <span style="color:#099">1</span>)
+</span></span><span style="display:flex;"><span>   }, error = <span style="color:#0a0">function</span>(e) {
+</span></span><span style="display:flex;"><span>     <span style="color:#0a0">stop</span>(<span style="color:#a50">&#34;That is not a valid event&#34;</span>)
+</span></span><span style="display:flex;"><span>   })
+</span></span></code></pre></div><p>In reality, much of my week was spent fighting with R&rsquo;s several methods of
 dealing with strings and arrays. Most of the changes this week were in the front
 end user-facing part of the app, so I&rsquo;m excited to work more on the backend next
 week (maybe finally improving the win probability calculation?). As a side note,

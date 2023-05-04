@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.40.2" />
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="" rel="alternate" type="application/rss+xml" title="Ben Does Baseball" />
+  
 </head>
 
 	<body class="theme-base-09 ">
@@ -42,11 +42,9 @@
       
         <li><a href="/resources/"> Resources </a></li>
       
-        <li><a href="/schedule/"> Schedule </a></li>
-      
     </ul>
 
-    <p>&copy; 2018. All rights reserved. </p>
+    <p>&copy; 2023. All rights reserved. </p>
   </div>
 </div>
 
@@ -56,11 +54,8 @@
 			 	<h1>Carl Edwards Had a Bad Day in a Great Year</h1>
 			  <span class="post-date">Thu, Mar 16, 2017</span>
 			      <p><em>This post was featured on the Fangraphs community blog <a href="http://www.fangraphs.com/community/carl-edwards-had-a-bad-day-in-a-great-year/">here</a></em></p>
-
-<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
-
+<p>This week I played around with the <a href="http://billpetti.github.io/baseballr"><code>baseballr</code></a> package, which provides easy access to FanGraphs, Baseball Reference, and Statcast data in R<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>I&rsquo;ve been particularly intrigued recently by <a href="http://www.baseball-reference.com/players/e/edwarca01.shtml">Carl Edwards Jr.</a>, a Cubs reliever who got called up last season. He had always seemed to be surprisingly good, but I wasn&rsquo;t aware quite how good he was until I calculated <a href="http://www.fangraphs.com/library/offense/woba/">wOBA</a> allowed by pitchers in 2016 and found that he had the third lowest in the league, behind only Kenley Jansen and Zach Britton, and in front of Clayton Kershaw, Aroldis Chapman, and Andrew Miller. Ranking Edwards among four of the game&rsquo;s top closers and the game&rsquo;s best starter seemed strange. Here are the six pitchers with the lowest wOBA-against last season:</p>
-
 <table>
 <thead>
 <tr>
@@ -73,7 +68,6 @@
 <th>wOBA</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Zach Britton</td>
@@ -84,7 +78,6 @@
 <td>1.80</td>
 <td>0.188</td>
 </tr>
-
 <tr>
 <td>Kenley Jansen</td>
 <td>68.2</td>
@@ -94,7 +87,6 @@
 <td>1.34</td>
 <td>0.188</td>
 </tr>
-
 <tr>
 <td>Carl Edwards</td>
 <td>36.0</td>
@@ -104,7 +96,6 @@
 <td>2.79</td>
 <td>0.201</td>
 </tr>
-
 <tr>
 <td>Clayton Kershaw</td>
 <td>149.2</td>
@@ -114,7 +105,6 @@
 <td>1.78</td>
 <td>0.202</td>
 </tr>
-
 <tr>
 <td>Aroldis Chapman</td>
 <td>58.0</td>
@@ -124,7 +114,6 @@
 <td>1.42</td>
 <td>0.206</td>
 </tr>
-
 <tr>
 <td>Andrew Miller</td>
 <td>74.1</td>
@@ -136,158 +125,132 @@
 </tr>
 </tbody>
 </table>
-
 <p>Edwards stands out negatively in several respects here. He pitched the least innings out of that group by far, and was almost certainly put in the least stressful situations. His ERA is almost two points higher than the next highest&rsquo;s, and his FIP is nearly a point higher than Britton&rsquo;s, the second highest mark. His BABIP is also remarkably low, due in part to luck and in part to the Cubs&rsquo; historically good defense. So why is his wOBA so remarkable?</p>
-
 <p>Looking through Edwards&rsquo; <a href="http://www.baseball-reference.com/players/gl.fcgi?id=edwarca01&amp;t=p&amp;year=2016">game log</a>, two bad appearances stand out:</p>
-
 <ol>
 <li>August 13th, where he allowed five runs on one hit and four walks while recording just two outs.</li>
 <li>September 17th, where he allowed three runs on three hits (two of them home runs) in an inning&rsquo;s work.</li>
 </ol>
-
 <p>If we remove the August 13th outing, Edwards&rsquo; ERA drops to <code>2.55</code>, almost an entire point. If we remove the September 17th outing as well, it drops to <code>1.83</code>. Removing the first performance, his FIP drops to <code>2.56</code>. Removing the other brings it down to <code>1.96</code>, which is still higher than the other five pitchers (possibly due to his BABIP) but much closer. Bad pitching performances are part of a pitcher&rsquo;s year, and shouldn&rsquo;t be entirely disregarded. However, it seems likely that <em>something</em> was off (mechanically, physically, or mentally) on August 13th.</p>
-
 <p>We&rsquo;ll get back to these games later.</p>
-
 <p>As the Cubs consistently carried three catchers last season, I thought it would be interesting to compare Edwards&rsquo; performance across all three:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej_by_catcher &lt;- cej %&gt;%
-  group_by(pitch_type, catcher) %&gt;%
-  summarize(n = n(),
-            avg_mph = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(start_speed)), na.rm = <span style="color:#00a">TRUE</span>),
-            avg_spin = <span style="color:#00a">mean</span>(<span style="color:#00a">as.numeric</span>(<span style="color:#00a">as.character</span>(spin_rate)), na.rm = <span style="color:#00a">TRUE</span>),
-            avg_hit_distance = <span style="color:#00a">mean</span>(hit_distance_sc, na.rm = <span style="color:#00a">TRUE</span>),
-            avg_hit_speed = <span style="color:#00a">mean</span>(hit_speed, na.rm = <span style="color:#00a">TRUE</span>),
-            avg_hit_angle = <span style="color:#00a">mean</span>(hit_angle, na.rm = <span style="color:#00a">TRUE</span>),
-            avg_barrel = <span style="color:#00a">mean</span>(barrel, na.rm = <span style="color:#00a">TRUE</span>),
-            avg_ext = <span style="color:#00a">mean</span>(release_extension, na.rm = <span style="color:#00a">TRUE</span>)) %&gt;%
-  mutate(pitch_pct = n/<span style="color:#00a">sum</span>(n)) %&gt;%
-  filter(pitch_type != <span style="color:#a50">&#34;CH&#34;</span>, pitch_type != <span style="color:#a50">&#34;IN&#34;</span>) <span style="color:#aaa;font-style:italic"># These each occur once and may be mistakes</span></code></pre></div>
-<p>The <code>baseballr</code> package also allows us to look at Statcast data from Baseball Savant:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cej &lt;- scrape_statcast_savant_pitcher(start_date = <span style="color:#a50">&#34;2016-04-06&#34;</span>, end_date = <span style="color:#a50">&#34;2016-10-15&#34;</span>, pitcherid = <span style="color:#099">605218</span>)</code></pre></div>
-<table>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>cej_by_catcher &lt;- cej %&gt;%
+</span></span><span style="display:flex;"><span>  <span style="color:#0a0">group_by</span>(pitch_type, catcher) %&gt;%
+</span></span><span style="display:flex;"><span>  <span style="color:#0a0">summarize</span>(n = <span style="color:#0a0">n</span>(),
+</span></span><span style="display:flex;"><span>            avg_mph = <span style="color:#0a0">mean</span>(<span style="color:#0a0">as.numeric</span>(<span style="color:#0a0">as.character</span>(start_speed)), na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_spin = <span style="color:#0a0">mean</span>(<span style="color:#0a0">as.numeric</span>(<span style="color:#0a0">as.character</span>(spin_rate)), na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_hit_distance = <span style="color:#0a0">mean</span>(hit_distance_sc, na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_hit_speed = <span style="color:#0a0">mean</span>(hit_speed, na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_hit_angle = <span style="color:#0a0">mean</span>(hit_angle, na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_barrel = <span style="color:#0a0">mean</span>(barrel, na.rm = <span style="color:#00a">TRUE</span>),
+</span></span><span style="display:flex;"><span>            avg_ext = <span style="color:#0a0">mean</span>(release_extension, na.rm = <span style="color:#00a">TRUE</span>)) %&gt;%
+</span></span><span style="display:flex;"><span>  <span style="color:#0a0">mutate</span>(pitch_pct = n/<span style="color:#0a0">sum</span>(n)) %&gt;%
+</span></span><span style="display:flex;"><span>  <span style="color:#0a0">filter</span>(pitch_type != <span style="color:#a50">&#34;CH&#34;</span>, pitch_type != <span style="color:#a50">&#34;IN&#34;</span>) <span style="color:#aaa;font-style:italic"># These each occur once and may be mistakes</span>
+</span></span></code></pre></div><p>The <code>baseballr</code> package also allows us to look at Statcast data from Baseball Savant:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>cej &lt;- <span style="color:#0a0">scrape_statcast_savant_pitcher</span>(start_date = <span style="color:#a50">&#34;2016-04-06&#34;</span>, end_date = <span style="color:#a50">&#34;2016-10-15&#34;</span>, pitcherid = <span style="color:#099">605218</span>)
+</span></span></code></pre></div><table>
 <thead>
 <tr>
-<th align="center">type</th>
-<th align="center">catcher</th>
-<th align="center">count</th>
-<th align="center">mph</th>
-<th align="center">hit_dist</th>
-<th align="center">hit_spd</th>
-<th align="center">pct</th>
+<th style="text-align:center">type</th>
+<th style="text-align:center">catcher</th>
+<th style="text-align:center">count</th>
+<th style="text-align:center">mph</th>
+<th style="text-align:center">hit_dist</th>
+<th style="text-align:center">hit_spd</th>
+<th style="text-align:center">pct</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="center">CU</td>
-<td align="center">Ross</td>
-<td align="center">27</td>
-<td align="center">81.16</td>
-<td align="center">119</td>
-<td align="center">73.6</td>
-<td align="center">16.67%</td>
+<td style="text-align:center">CU</td>
+<td style="text-align:center">Ross</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">81.16</td>
+<td style="text-align:center">119</td>
+<td style="text-align:center">73.6</td>
+<td style="text-align:center">16.67%</td>
 </tr>
-
 <tr>
-<td align="center">CU</td>
-<td align="center">Montero</td>
-<td align="center">53</td>
-<td align="center">81.54</td>
-<td align="center">258.8</td>
-<td align="center">94.86</td>
-<td align="center">32.72%</td>
+<td style="text-align:center">CU</td>
+<td style="text-align:center">Montero</td>
+<td style="text-align:center">53</td>
+<td style="text-align:center">81.54</td>
+<td style="text-align:center">258.8</td>
+<td style="text-align:center">94.86</td>
+<td style="text-align:center">32.72%</td>
 </tr>
-
 <tr>
-<td align="center">CU</td>
-<td align="center">Federowicz</td>
-<td align="center">3</td>
-<td align="center">81.25</td>
-<td align="center">NA</td>
-<td align="center">NA</td>
-<td align="center">1.85%</td>
+<td style="text-align:center">CU</td>
+<td style="text-align:center">Federowicz</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">81.25</td>
+<td style="text-align:center">NA</td>
+<td style="text-align:center">NA</td>
+<td style="text-align:center">1.85%</td>
 </tr>
-
 <tr>
-<td align="center">CU</td>
-<td align="center">Contreras</td>
-<td align="center">79</td>
-<td align="center">81.02</td>
-<td align="center">208.8</td>
-<td align="center">87.74</td>
-<td align="center">48.77%</td>
+<td style="text-align:center">CU</td>
+<td style="text-align:center">Contreras</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">81.02</td>
+<td style="text-align:center">208.8</td>
+<td style="text-align:center">87.74</td>
+<td style="text-align:center">48.77%</td>
 </tr>
-
 <tr>
-<td align="center">FF</td>
-<td align="center">Ross</td>
-<td align="center">99</td>
-<td align="center">95.72</td>
-<td align="center">186.8</td>
-<td align="center">84.31</td>
-<td align="center">21.57%</td>
+<td style="text-align:center">FF</td>
+<td style="text-align:center">Ross</td>
+<td style="text-align:center">99</td>
+<td style="text-align:center">95.72</td>
+<td style="text-align:center">186.8</td>
+<td style="text-align:center">84.31</td>
+<td style="text-align:center">21.57%</td>
 </tr>
-
 <tr>
-<td align="center">FF</td>
-<td align="center">Montero</td>
-<td align="center">147</td>
-<td align="center">95.44</td>
-<td align="center">211.1</td>
-<td align="center">83.77</td>
-<td align="center">32.03%</td>
+<td style="text-align:center">FF</td>
+<td style="text-align:center">Montero</td>
+<td style="text-align:center">147</td>
+<td style="text-align:center">95.44</td>
+<td style="text-align:center">211.1</td>
+<td style="text-align:center">83.77</td>
+<td style="text-align:center">32.03%</td>
 </tr>
-
 <tr>
-<td align="center">FF</td>
-<td align="center">Federowicz</td>
-<td align="center">9</td>
-<td align="center">95.77</td>
-<td align="center">183</td>
-<td align="center">95.5</td>
-<td align="center">1.96%</td>
+<td style="text-align:center">FF</td>
+<td style="text-align:center">Federowicz</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">95.77</td>
+<td style="text-align:center">183</td>
+<td style="text-align:center">95.5</td>
+<td style="text-align:center">1.96%</td>
 </tr>
-
 <tr>
-<td align="center">FF</td>
-<td align="center">Contreras</td>
-<td align="center">204</td>
-<td align="center">95.44</td>
-<td align="center">199.4</td>
-<td align="center">85.94</td>
-<td align="center">44.44%</td>
+<td style="text-align:center">FF</td>
+<td style="text-align:center">Contreras</td>
+<td style="text-align:center">204</td>
+<td style="text-align:center">95.44</td>
+<td style="text-align:center">199.4</td>
+<td style="text-align:center">85.94</td>
+<td style="text-align:center">44.44%</td>
 </tr>
 </tbody>
 </table>
-
 <p>From the table, we can see that Edwards throws two main pitches—a four-seam fastball and a curveball. He pitched most often to Willson Contreras, then Miguel Montero, then David Ross (and once to Tim Federowicz). Edwards threw his fastball a notch faster to Ross than other catchers, which could be due to the small sample size. He also threw his fastball more to Ross than other catchers: despite throwing 16.67% of his curveballs to Ross, he threw 21.57% of his fastballs to him. There are several reasons this might be the case:</p>
-
 <ol>
 <li>Edwards focused on his fastball earlier in the season before gaining more confidence in his curve.</li>
 <li>Ross saw that Edwards&rsquo; fastball was producing better results and called it more often.</li>
 <li>Contreras was more confident in his agility and therefore ability to block a curveball than Ross was.</li>
 <li>Random sampling and a small sample size.</li>
 </ol>
-
 <p>Let&rsquo;s take a look at the results these pitches got. By plotting hit velocity and hit distance, we can compare results across catchers:</p>
-
-<p><img src="/images/cevd1.png" alt="blah" /></p>
-
+<p><img src="/images/cevd1.png" alt="blah"></p>
 <p>When Ross was catching, Edwards tended to generate softer contact that went shorter distances. We can use the Statcast data to see why that is.</p>
-
-<p><img src="/images/cesv1.png" alt="blah" /></p>
-
-<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
-
-<p><img src="/images/cevd2.png" alt="blah" /></p>
-
+<p><img src="/images/cesv1.png" alt="blah"></p>
+<p>This chart, plotting spin against pitch velocity, shows something interesting: Edwards&rsquo; pitches had the highest spin when throwing to Ross. Curveballs with higher spin tend to induce more ground balls<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, which is advantageous for Edwards thanks in part to the defense behind him. High spin on his four-seamer is essential to Edwards&rsquo; style, and that was maximized when Ross was catching. Of course, this isn&rsquo;t necessarily related to the catcher. It could be the case that Ross just happened to catch Edwards on his better days. For greater parity, we can look to see what happens to Contreras&rsquo; numbers if we take away the two worst games in Edwards&rsquo; season.</p>
+<p><img src="/images/cevd2.png" alt="blah"></p>
 <p>Already we see that removing the two bad outings brings Contreras much closer to Ross and  Montero in terms of average hit speed and hit distance. Now we can look at how removing the bad outing affects velocity and spin.</p>
-
-<p><img src="/images/cesv2.png" alt="blah" /></p>
-
+<p><img src="/images/cesv2.png" alt="blah"></p>
 <p>There isn&rsquo;t any effect on the spin of Edwards&rsquo; curveball while Contreras is catching, but the spin on his fastball gets much closer to Ross than Montero. Let&rsquo;s compare Edwards&rsquo; Statcast data between the August 13th outing and his overall averages (the bolded rows are from the 13th):</p>
-
 <table>
 <thead>
 <tr>
@@ -297,7 +260,6 @@
 <th>Ext</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>FF</td>
@@ -305,21 +267,18 @@
 <td>1876</td>
 <td>6.85</td>
 </tr>
-
 <tr>
 <td><strong>FF</strong></td>
 <td><strong>94.60</strong></td>
 <td><strong>1602</strong></td>
 <td><strong>6.73</strong></td>
 </tr>
-
 <tr>
 <td>CU</td>
 <td>81.20</td>
 <td>1605</td>
 <td>6.31</td>
 </tr>
-
 <tr>
 <td><strong>CU</strong></td>
 <td><strong>81.49</strong></td>
@@ -328,9 +287,7 @@
 </tr>
 </tbody>
 </table>
-
 <p>If we add in the other poor outing:</p>
-
 <table>
 <thead>
 <tr>
@@ -340,7 +297,6 @@
 <th>Ext</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>FF</td>
@@ -348,21 +304,18 @@
 <td>1873</td>
 <td>6.85</td>
 </tr>
-
 <tr>
 <td><strong>FF</strong></td>
 <td><strong>95.08</strong></td>
 <td><strong>1749</strong></td>
 <td><strong>6.74</strong></td>
 </tr>
-
 <tr>
 <td>CU</td>
 <td>81.23</td>
 <td>1610</td>
 <td>6.31</td>
 </tr>
-
 <tr>
 <td><strong>CU</strong></td>
 <td><strong>81.12</strong></td>
@@ -371,19 +324,17 @@
 </tr>
 </tbody>
 </table>
-
 <p>Adding in the second bad outing makes the numbers more similar, lending credence to the idea that the first outing was an outlier. On August 13th the spin on his fastball, his extension, and his velocity were all down a tick.</p>
-
 <p>Carl Edwards had a quietly great year out of the bullpen for the Cubs. He was among the league leaders in wOBA-against, which is initially surprising based on his peripheral numbers. Upon removing an outing where the spin rate and velocity on his signature pitch took a steep downturn, Edwards&rsquo; peripheral numbers match up more closely with the type of performance you&rsquo;d expect from someone in that elite group of pitchers. Carl Edwards had a bad day—here&rsquo;s to more good ones.</p>
-<div class="footnotes">
-
-<hr />
-
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">As part of this analysis, I defined a function <code>playername_lookup</code> that gets a player&rsquo;s name from their MLBAM id (this function is based on the <code>playerid_lookup</code> function from the <code>baseballr</code> package). It is provided <a href="https://gist.github.com/benfb/c2be996bcdbf0b1fa9f7f544fceb2934">here</a> for reference.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2"><a href="http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/">http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/</a>
- <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:1">
+<p>As part of this analysis, I defined a function <code>playername_lookup</code> that gets a player&rsquo;s name from their MLBAM id (this function is based on the <code>playerid_lookup</code> function from the <code>baseballr</code> package). It is provided <a href="https://gist.github.com/benfb/c2be996bcdbf0b1fa9f7f544fceb2934">here</a> for reference.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/">http://m.mlb.com/news/article/160896926/statcast-spin-rate-compared-to-velocity/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
 </div>
 

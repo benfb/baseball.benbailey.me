@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.40.2" />
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="" rel="alternate" type="application/rss+xml" title="Ben Does Baseball" />
+  
 </head>
 
 	<body class="theme-base-09 ">
@@ -42,11 +42,9 @@
       
         <li><a href="/resources/"> Resources </a></li>
       
-        <li><a href="/schedule/"> Schedule </a></li>
-      
     </ul>
 
-    <p>&copy; 2018. All rights reserved. </p>
+    <p>&copy; 2023. All rights reserved. </p>
   </div>
 </div>
 
@@ -58,7 +56,6 @@
 			      <p>This week I mostly focused on experimenting with the Retrosheet and MLB Gameday API formats.
 Using the <code>baseball</code> umbrella application combined with R and Plotly, I generated a win expectancy
 graph for a random game.</p>
-
 <p>In any given situation, the win expectancy is equivalent to the percentage of games
 that teams in that exact situation went on to win. To calculate the win probability of
 a situation, the application converts the situation into a hash using the number of outs,
@@ -68,84 +65,79 @@ and <a href="http://www.retrosheet.org">Retrosheet</a> data. The code for the wi
 <a href="https://github.com/benfb/baseball/tree/master/apps/baseball_win_ex">here</a>, and the general downloader&rsquo;s source is <a href="https://github.com/benfb/baseball/tree/master/apps/baseball_slurper">here</a>. What follows
 is an example of a manually-generated win expectancy graph of the game that occurred
 on May 10th of last season between the Padres and the Cubs.</p>
-
 <p>First, we utilize the two functions <code>probabilities_from_game/2</code> and <code>descriptions_from_game/2</code>
 to get vectors of win expectancies and descriptions of every event that occurred in the game:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elixir" data-lang="elixir">iex(<span style="color:#099">1</span>)&gt; <span style="color:#0a0">BaseballSlurper.Server</span>.probabilities_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
-[[<span style="color:#099">0.5652355266525733</span>, <span style="color:#099">0.5826495329514373</span>, <span style="color:#099">0.593064127007075</span>],
- [<span style="color:#099">0.5669081828973761</span>, <span style="color:#099">0.5470361185179661</span>, <span style="color:#099">0.534091190836288</span>],
- [<span style="color:#099">0.5569277494191046</span>, <span style="color:#099">0.5742743999613658</span>, <span style="color:#099">0.5803200220916497</span>],...]
-
-iex(<span style="color:#099">2</span>)&gt; <span style="color:#0a0">BaseballSlurper.Server</span>.descriptions_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
-[[<span style="color:#a50">&#34;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&#34;</span>,
-  <span style="color:#a50">&#34;Wil Myers flies out to center fielder Dexter Fowler.&#34;</span>,
-  <span style="color:#a50">&#34;Matt Kemp lines out to center fielder Dexter Fowler.&#34;</span>],
- [<span style="color:#a50">&#34;Dexter Fowler strikes out swinging.&#34;</span>,
-  <span style="color:#a50">&#34;Jason Heyward lines out to center fielder Jon Jay.&#34;</span>,
-  <span style="color:#a50">&#34;Kris Bryant lines out to right fielder Matt Kemp.&#34;</span>],...]</code></pre></div>
-<p>We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#00a">library</span>(plotly)
-<span style="color:#00a">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_username&#34;</span> = <span style="color:#a50">&#34;benfb&#34;</span>)
-<span style="color:#00a">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_api_key&#34;</span> = API_KEY)
-probabilities &lt;- <span style="color:#0aa">c</span>(PROBABILITY_VECTOR)
-x &lt;- <span style="color:#00a">seq_along</span>(y)
-event &lt;- <span style="color:#0aa">c</span>(DESCRIPTION_VECTOR)
-data &lt;- <span style="color:#0aa">data.frame</span>(x, y, event)
-
-kb &lt;- <span style="color:#0aa">list</span>(
-  xref = <span style="color:#a50">&#39;paper&#39;</span>,
-  yref = <span style="color:#a50">&#39;y&#39;</span>,
-  x = <span style="color:#00a">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#00a">length</span>(x)))[<span style="color:#099">23</span>],
-  y = probabilities[<span style="color:#099">23</span>],
-  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
-  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
-  text = <span style="color:#a50">&#39;K Bryant Double&#39;</span>,
-  font = <span style="color:#0aa">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
-              size = <span style="color:#099">16</span>,
-              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
-  showarrow = <span style="color:#00a">FALSE</span>)
-
-ad &lt;- <span style="color:#0aa">list</span>(
-  xref = <span style="color:#a50">&#39;paper&#39;</span>,
-  yref = <span style="color:#a50">&#39;y&#39;</span>,
-  x = <span style="color:#00a">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#00a">length</span>(x)))[<span style="color:#099">72</span>],
-  y = probabilities[<span style="color:#099">72</span>],
-  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
-  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
-  text = <span style="color:#a50">&#39;A Dickerson Home Run&#39;</span>,
-  font = <span style="color:#0aa">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
-              size = <span style="color:#099">16</span>,
-              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
-  showarrow = <span style="color:#00a">FALSE</span>)
-
-p &lt;- plot_ly(
-  data,
-  x = <span style="color:#00a">seq_along</span>(y),
-  y = probabilities,
-  type = <span style="color:#a50">&#39;scatter&#39;</span>,
-  mode = <span style="color:#a50">&#39;lines&#39;</span>,
-  text = event) %&gt;%
-layout(
-  title = <span style="color:#a50">&#39;SDN @ CHN 2016-05-10&#39;</span>,
-  xaxis = <span style="color:#0aa">list</span>(title = <span style="color:#a50">&#39;Game Event&#39;</span>),
-  yaxis = <span style="color:#0aa">list</span>(title = <span style="color:#a50">&#39;Home Team Win Probability&#39;</span>)) %&gt;%
-layout(annotations = <span style="color:#0aa">list</span>(kb, ad))</code></pre></div>
-<p>This R code yields the following chart:</p>
-
-<iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plot.ly/~benfb/0.embed"></iframe>
-
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elixir" data-lang="elixir"><span style="display:flex;"><span>iex(<span style="color:#099">1</span>)&gt; <span style="color:#0a0;text-decoration:underline">BaseballSlurper.Server</span>.probabilities_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
+</span></span><span style="display:flex;"><span>[[<span style="color:#099">0.5652355266525733</span>, <span style="color:#099">0.5826495329514373</span>, <span style="color:#099">0.593064127007075</span>],
+</span></span><span style="display:flex;"><span> [<span style="color:#099">0.5669081828973761</span>, <span style="color:#099">0.5470361185179661</span>, <span style="color:#099">0.534091190836288</span>],
+</span></span><span style="display:flex;"><span> [<span style="color:#099">0.5569277494191046</span>, <span style="color:#099">0.5742743999613658</span>, <span style="color:#099">0.5803200220916497</span>],...]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iex(<span style="color:#099">2</span>)&gt; <span style="color:#0a0;text-decoration:underline">BaseballSlurper.Server</span>.descriptions_from_game(<span style="color:#a50">&#34;2016-05-10&#34;</span>, [<span style="color:#a50">&#34;sdn&#34;</span>, <span style="color:#a50">&#34;chn&#34;</span>])
+</span></span><span style="display:flex;"><span>[[<span style="color:#a50">&#34;Jon Jay grounds out, second baseman Ben Zobrist to first baseman Anthony Rizzo.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a50">&#34;Wil Myers flies out to center fielder Dexter Fowler.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a50">&#34;Matt Kemp lines out to center fielder Dexter Fowler.&#34;</span>],
+</span></span><span style="display:flex;"><span> [<span style="color:#a50">&#34;Dexter Fowler strikes out swinging.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a50">&#34;Jason Heyward lines out to center fielder Jon Jay.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a50">&#34;Kris Bryant lines out to right fielder Matt Kemp.&#34;</span>],...]
+</span></span></code></pre></div><p>We can then plug these two vectors into R to get an interactive win expectancy graph with Plotly:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#0a0">library</span>(plotly)
+</span></span><span style="display:flex;"><span><span style="color:#0a0">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_username&#34;</span> = <span style="color:#a50">&#34;benfb&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#0a0">Sys.setenv</span>(<span style="color:#a50">&#34;plotly_api_key&#34;</span> = API_KEY)
+</span></span><span style="display:flex;"><span>probabilities &lt;- <span style="color:#0a0">c</span>(PROBABILITY_VECTOR)
+</span></span><span style="display:flex;"><span>x &lt;- <span style="color:#0a0">seq_along</span>(y)
+</span></span><span style="display:flex;"><span>event &lt;- <span style="color:#0a0">c</span>(DESCRIPTION_VECTOR)
+</span></span><span style="display:flex;"><span>data &lt;- <span style="color:#0a0">data.frame</span>(x, y, event)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kb &lt;- <span style="color:#0a0">list</span>(
+</span></span><span style="display:flex;"><span>  xref = <span style="color:#a50">&#39;paper&#39;</span>,
+</span></span><span style="display:flex;"><span>  yref = <span style="color:#a50">&#39;y&#39;</span>,
+</span></span><span style="display:flex;"><span>  x = <span style="color:#0a0">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#0a0">length</span>(x)))[23],
+</span></span><span style="display:flex;"><span>  y = probabilities[23],
+</span></span><span style="display:flex;"><span>  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
+</span></span><span style="display:flex;"><span>  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
+</span></span><span style="display:flex;"><span>  text = <span style="color:#a50">&#39;K Bryant Double&#39;</span>,
+</span></span><span style="display:flex;"><span>  font = <span style="color:#0a0">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
+</span></span><span style="display:flex;"><span>              size = <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
+</span></span><span style="display:flex;"><span>  showarrow = <span style="color:#00a">FALSE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ad &lt;- <span style="color:#0a0">list</span>(
+</span></span><span style="display:flex;"><span>  xref = <span style="color:#a50">&#39;paper&#39;</span>,
+</span></span><span style="display:flex;"><span>  yref = <span style="color:#a50">&#39;y&#39;</span>,
+</span></span><span style="display:flex;"><span>  x = <span style="color:#0a0">seq</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, by=(<span style="color:#099">1</span>/<span style="color:#0a0">length</span>(x)))[72],
+</span></span><span style="display:flex;"><span>  y = probabilities[72],
+</span></span><span style="display:flex;"><span>  xanchor = <span style="color:#a50">&#39;right&#39;</span>,
+</span></span><span style="display:flex;"><span>  yanchor = <span style="color:#a50">&#39;middle&#39;</span>,
+</span></span><span style="display:flex;"><span>  text = <span style="color:#a50">&#39;A Dickerson Home Run&#39;</span>,
+</span></span><span style="display:flex;"><span>  font = <span style="color:#0a0">list</span>(family = <span style="color:#a50">&#39;Arial&#39;</span>,
+</span></span><span style="display:flex;"><span>              size = <span style="color:#099">16</span>,
+</span></span><span style="display:flex;"><span>              color = <span style="color:#a50">&#39;rgba(67,67,67,1)&#39;</span>),
+</span></span><span style="display:flex;"><span>  showarrow = <span style="color:#00a">FALSE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p &lt;- <span style="color:#0a0">plot_ly</span>(
+</span></span><span style="display:flex;"><span>  data,
+</span></span><span style="display:flex;"><span>  x = <span style="color:#0a0">seq_along</span>(y),
+</span></span><span style="display:flex;"><span>  y = probabilities,
+</span></span><span style="display:flex;"><span>  type = <span style="color:#a50">&#39;scatter&#39;</span>,
+</span></span><span style="display:flex;"><span>  mode = <span style="color:#a50">&#39;lines&#39;</span>,
+</span></span><span style="display:flex;"><span>  text = event) %&gt;%
+</span></span><span style="display:flex;"><span><span style="color:#0a0">layout</span>(
+</span></span><span style="display:flex;"><span>  title = <span style="color:#a50">&#39;SDN @ CHN 2016-05-10&#39;</span>,
+</span></span><span style="display:flex;"><span>  xaxis = <span style="color:#0a0">list</span>(title = <span style="color:#a50">&#39;Game Event&#39;</span>),
+</span></span><span style="display:flex;"><span>  yaxis = <span style="color:#0a0">list</span>(title = <span style="color:#a50">&#39;Home Team Win Probability&#39;</span>)) %&gt;%
+</span></span><span style="display:flex;"><span><span style="color:#0a0">layout</span>(annotations = <span style="color:#0a0">list</span>(kb, ad))
+</span></span></code></pre></div><p>This R code yields the following chart:</p>
+<!-- raw HTML omitted -->
 <p>For comparison, the Fangraph&rsquo;s win expectancy graph is <a href="http://www.fangraphs.com/wins.aspx?date=2016-05-10&amp;team=Cubs&amp;dh=0&amp;season=2016">here</a>, and you can find
-the full video of the game on <a href="https://www.youtube.com/watch?v=wGqoB_8hNtw">MLB&rsquo;s YouTube channel</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
-
+the full video of the game on <a href="https://www.youtube.com/watch?v=wGqoB_8hNtw">MLB&rsquo;s YouTube channel</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>The next step will be to automate this process and look into self-hosting
 the graphs instead of going through Plotly&rsquo;s rate-limited API.</p>
-<div class="footnotes">
-
-<hr />
-
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">The date in the title of this video is actually incorrect. It&rsquo;s actually the game from May 10th.
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1">
+<p>The date in the title of this video is actually incorrect. It&rsquo;s actually the game from May 10th.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
 </div>
 
